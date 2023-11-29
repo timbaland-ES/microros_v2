@@ -10,7 +10,7 @@ PREFIX=$(ros2 pkg prefix micro_ros_setup)
 
 # Parse cli arguments
 UROS_FAST_BUILD=off
-UROS_VERBOSE_BUILD=off
+UROS_VERBOSE_BUILD=on #BittlT: vorher off 
 UROS_EXTRA_BUILD_ARGS=""
 
 while getopts "vf" o

@@ -2,9 +2,9 @@
 
 #project(MyProjectName LANGUAGES C CXX) #Eigene Ergänzung. Anscheinend wird dadurch C aktiviert... erzeugt aber Fehler...
 
-#set(CMAKE_SYSTEM_NAME Generic)	   			#okay, da Cross-Compiling
-#set(CMAKE_CROSSCOMPILING 1)				#okay, aktiviert Cross-Compiling-Modus
-#set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)	#okay, Anweisung, dass static lib erstellt werden soll
+set(CMAKE_SYSTEM_NAME Generic)	   			#okay, da Cross-Compiling
+set(CMAKE_CROSSCOMPILING 1)				#okay, aktiviert Cross-Compiling-Modus
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)	#okay, Anweisung, dass static lib erstellt werden soll
 
 message(STATUS "Verwende das Toolchain File von BittlT 0")
 
@@ -13,7 +13,7 @@ message(STATUS "Verwende das Toolchain File von BittlT 0")
 set(CMAKE_C_COMPILER "/opt/tricore_940_linux/tricore_940_linux/bin/tricore-elf-gcc")
 #set(CMAKE_CXX_COMPILER "/opt/tricore_494_linux/tricore_494_linux/bin/tricore-elf-g++")
 
-#set(CMAKE_C_COMPILER_WORKS 1 CACHE INTERNAL "")	#hier wird C-Compiler-Funktionsüberprüfung deaktiviert. Möchte ich aber, da aktuell errors...
+set(CMAKE_C_COMPILER_WORKS 1 CACHE INTERNAL "")	#hier wird C-Compiler-Funktionsüberprüfung deaktiviert. Möchte ich aber, da aktuell errors...
 #set(CMAKE_CXX_COMPILER_WORKS 1 CACHE INTERNAL "")	#C++ Compiler wird nicht benötigt
 
 # SET HERE YOUR BUILDING FLAGS
@@ -26,7 +26,7 @@ set(CMAKE_C_COMPILER "/opt/tricore_940_linux/tricore_940_linux/bin/tricore-elf-g
 # Versuch1: best of Vorlage + XEMIO: 
 #set(FLAGS "-nostdlib -DCLOCK_MONOTONIC=0 -D'__attribute__(x)=' -msmall-const=0 -Wall -Wextra -Wdiv-by-zero -Warray-bounds -Wcast-align -Wignored-qualifiers -Wformat -Wformat-security -mcpu=tc39xx -mversion-info -fno-common -fno-short-enums -fshort-double -fsingle-precision-constant -fstrict-volatile-bitfields -ffunction-sections -fdata-sections -std=c99 -g" CACHE STRING "" FORCE)
 
-message(STATUS "Using toolchain file: BittlT 1")
+message(STATUS "Verwende das Toolchain File von BittlT  1")
 
 
 #verwendet - Versuch2: jetzt nur wesentliches von XEMIO:
