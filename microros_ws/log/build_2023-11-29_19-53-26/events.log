@@ -1,0 +1,260 @@
+[0.000000] (-) TimerEvent: {}
+[0.007747] (micro_ros_setup) JobQueued: {'identifier': 'micro_ros_setup', 'dependencies': OrderedDict()}
+[0.007861] (micro_ros_setup) JobStarted: {'identifier': 'micro_ros_setup'}
+[0.084155] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'cmake'}
+[0.084713] (micro_ros_setup) Command: {'cmd': ['/usr/bin/cmake', '/home/timbo/microros_v2/microros_ws/micro_ros_setup', '-DCMAKE_INSTALL_PREFIX=/home/timbo/microros_v2/microros_ws/install/micro_ros_setup'], 'cwd': '/home/timbo/microros_v2/microros_ws/build/micro_ros_setup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'timbo'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/timbo/microros_ws/install/micro_ros_agent/lib:/home/timbo/microros_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/timbo'), ('OLDPWD', '/home/timbo/microros_v2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1388'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=743de7775184b9c6249a5c436567850d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/timbo/microros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'timbo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'timbo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/timbo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/tricore_940_linux/tricore_940_linux/bin/'), ('SESSION_MANAGER', 'local/timbo-vm:@/tmp/.ICE-unix/1388,unix/timbo-vm:/tmp/.ICE-unix/1388'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/db5d0c8e_e719_469e_b4d2_bfd74d0ea17a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.40BDF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.112'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/timbo/microros_ws/install/micro_ros_setup:/home/timbo/microros_ws/install/micro_ros_agent:/home/timbo/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/timbo/microros_v2/microros_ws/build/micro_ros_setup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=743de7775184b9c6249a5c436567850d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/timbo/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/timbo/microros_ws/install/micro_ros_setup:/home/timbo/microros_ws/install/micro_ros_agent:/home/timbo/microros_ws/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[0.097789] (-) TimerEvent: {}
+[0.205427] (-) TimerEvent: {}
+[0.306889] (-) TimerEvent: {}
+[0.408674] (-) TimerEvent: {}
+[0.509473] (-) TimerEvent: {}
+[0.676558] (-) TimerEvent: {}
+[0.778114] (-) TimerEvent: {}
+[0.880869] (-) TimerEvent: {}
+[0.982903] (-) TimerEvent: {}
+[1.084369] (-) TimerEvent: {}
+[1.185438] (-) TimerEvent: {}
+[1.286585] (-) TimerEvent: {}
+[1.387245] (-) TimerEvent: {}
+[1.507200] (-) TimerEvent: {}
+[1.518030] (micro_ros_setup) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.607678] (-) TimerEvent: {}
+[1.708398] (-) TimerEvent: {}
+[1.809196] (-) TimerEvent: {}
+[1.910831] (-) TimerEvent: {}
+[2.012865] (-) TimerEvent: {}
+[2.113867] (-) TimerEvent: {}
+[2.215119] (-) TimerEvent: {}
+[2.317158] (-) TimerEvent: {}
+[2.371606] (micro_ros_setup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[2.410116] (micro_ros_setup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.418878] (-) TimerEvent: {}
+[2.520819] (-) TimerEvent: {}
+[2.621597] (micro_ros_setup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.621774] (-) TimerEvent: {}
+[2.627330] (micro_ros_setup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.628551] (micro_ros_setup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.642091] (micro_ros_setup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.652231] (micro_ros_setup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.723094] (-) TimerEvent: {}
+[2.799511] (micro_ros_setup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.805090] (micro_ros_setup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.805451] (micro_ros_setup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.805797] (micro_ros_setup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.826322] (-) TimerEvent: {}
+[2.929458] (-) TimerEvent: {}
+[3.032104] (-) TimerEvent: {}
+[3.041680] (micro_ros_setup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[3.132868] (-) TimerEvent: {}
+[3.234820] (-) TimerEvent: {}
+[3.335955] (-) TimerEvent: {}
+[3.336938] (micro_ros_setup) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[3.441845] (-) TimerEvent: {}
+[3.545616] (-) TimerEvent: {}
+[3.645954] (micro_ros_setup) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.646131] (-) TimerEvent: {}
+[3.748309] (-) TimerEvent: {}
+[3.848649] (micro_ros_setup) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[3.848834] (-) TimerEvent: {}
+[3.868110] (micro_ros_setup) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.871346] (micro_ros_setup) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.873501] (micro_ros_setup) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.884992] (micro_ros_setup) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.889184] (micro_ros_setup) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.893291] (micro_ros_setup) StdoutLine: {'line': b'-- Generating done\n'}
+[3.894543] (micro_ros_setup) StdoutLine: {'line': b'-- Build files have been written to: /home/timbo/microros_v2/microros_ws/build/micro_ros_setup\n'}
+[3.899165] (micro_ros_setup) CommandEnded: {'returncode': 0}
+[3.901759] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'build'}
+[3.901843] (micro_ros_setup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/timbo/microros_v2/microros_ws/build/micro_ros_setup', '--', '-j6', '-l6'], 'cwd': '/home/timbo/microros_v2/microros_ws/build/micro_ros_setup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'timbo'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/timbo/microros_ws/install/micro_ros_agent/lib:/home/timbo/microros_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/timbo'), ('OLDPWD', '/home/timbo/microros_v2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1388'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=743de7775184b9c6249a5c436567850d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/timbo/microros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'timbo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'timbo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/timbo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/tricore_940_linux/tricore_940_linux/bin/'), ('SESSION_MANAGER', 'local/timbo-vm:@/tmp/.ICE-unix/1388,unix/timbo-vm:/tmp/.ICE-unix/1388'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/db5d0c8e_e719_469e_b4d2_bfd74d0ea17a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.40BDF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.112'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/timbo/microros_ws/install/micro_ros_setup:/home/timbo/microros_ws/install/micro_ros_agent:/home/timbo/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/timbo/microros_v2/microros_ws/build/micro_ros_setup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=743de7775184b9c6249a5c436567850d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/timbo/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/timbo/microros_ws/install/micro_ros_setup:/home/timbo/microros_ws/install/micro_ros_agent:/home/timbo/microros_ws/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[3.949689] (-) TimerEvent: {}
+[3.955186] (micro_ros_setup) CommandEnded: {'returncode': 0}
+[4.005338] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'install'}
+[4.018815] (micro_ros_setup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/timbo/microros_v2/microros_ws/build/micro_ros_setup'], 'cwd': '/home/timbo/microros_v2/microros_ws/build/micro_ros_setup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'timbo'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/timbo/microros_ws/install/micro_ros_agent/lib:/home/timbo/microros_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/timbo'), ('OLDPWD', '/home/timbo/microros_v2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1388'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=743de7775184b9c6249a5c436567850d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/timbo/microros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'timbo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'timbo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/timbo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/tricore_940_linux/tricore_940_linux/bin/'), ('SESSION_MANAGER', 'local/timbo-vm:@/tmp/.ICE-unix/1388,unix/timbo-vm:/tmp/.ICE-unix/1388'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/db5d0c8e_e719_469e_b4d2_bfd74d0ea17a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.40BDF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.112'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/timbo/microros_ws/install/micro_ros_setup:/home/timbo/microros_ws/install/micro_ros_agent:/home/timbo/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/timbo/microros_v2/microros_ws/build/micro_ros_setup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=743de7775184b9c6249a5c436567850d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/timbo/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/timbo/microros_ws/install/micro_ros_setup:/home/timbo/microros_ws/install/micro_ros_agent:/home/timbo/microros_ws/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[4.029197] (micro_ros_setup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.029511] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/package_run_dependencies/micro_ros_setup\n'}
+[4.029926] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/parent_prefix_path/micro_ros_setup\n'}
+[4.030183] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/ament_prefix_path.sh\n'}
+[4.030391] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/ament_prefix_path.dsv\n'}
+[4.030711] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/path.sh\n'}
+[4.031405] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/path.dsv\n'}
+[4.034419] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.bash\n'}
+[4.034519] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.sh\n'}
+[4.034763] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.zsh\n'}
+[4.035121] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.dsv\n'}
+[4.035267] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/package.dsv\n'}
+[4.039045] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/packages/micro_ros_setup\n'}
+[4.039219] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/cmake/micro_ros_setupConfig.cmake\n'}
+[4.042730] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/cmake/micro_ros_setupConfig-version.cmake\n'}
+[4.043755] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/share/micro_ros_setup/package.xml\n'}
+[4.043931] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config\n'}
+[4.044131] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian\n'}
+[4.044879] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/dev_uros_packages.repos\n'}
+[4.044956] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/generic\n'}
+[4.045012] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/generic/flash.sh\n'}
+[4.050187] (-) TimerEvent: {}
+[4.050686] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/generic/client-colcon.meta\n'}
+[4.050770] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/generic/build.sh\n'}
+[4.050828] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/generic/supported_platforms\n'}
+[4.050878] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/generic/client_uros_packages.repos\n'}
+[4.050943] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/generic/configure.sh\n'}
+[4.050993] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/generic/create.sh\n'}
+[4.051040] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/raspbian/dev_ros2_packages.txt\n'}
+[4.051085] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/client_ros2_packages.txt\n'}
+[4.051153] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra\n'}
+[4.051201] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/dev_uros_packages.repos\n'}
+[4.051247] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/dev_ros2_packages.txt\n'}
+[4.051292] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/list_apps.sh\n'}
+[4.051336] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5\n'}
+[4.051380] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/flash.sh\n'}
+[4.051424] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/client-colcon.meta\n'}
+[4.051466] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/board.repos\n'}
+[4.051510] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/build.sh\n'}
+[4.051554] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/client_uros_packages.repos\n'}
+[4.051597] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/configure.sh\n'}
+[4.051639] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/create.sh\n'}
+[4.051682] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed\n'}
+[4.051724] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/dev_uros_packages.repos\n'}
+[4.051767] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/generic\n'}
+[4.051809] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/generic/flash.sh\n'}
+[4.051859] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/generic/board.repos\n'}
+[4.051905] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/generic/build.sh\n'}
+[4.051948] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/generic/supported_platforms\n'}
+[4.051991] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/generic/package.xml\n'}
+[4.052033] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/generic/client_uros_packages.repos\n'}
+[4.052076] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/generic/create.sh\n'}
+[4.052118] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/dev_ros2_packages.txt\n'}
+[4.052160] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/mbed/list_apps.sh\n'}
+[4.052203] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr\n'}
+[4.052306] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/dev_uros_packages.repos\n'}
+[4.052361] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic\n'}
+[4.052407] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/flash.sh\n'}
+[4.052450] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/client-colcon.meta\n'}
+[4.052493] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/board.repos\n'}
+[4.052537] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/build.sh\n'}
+[4.052743] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/supported_platforms\n'}
+[4.052802] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/package.xml\n'}
+[4.052977] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/client_uros_packages.repos\n'}
+[4.053167] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/configure.sh\n'}
+[4.053341] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/generic/create.sh\n'}
+[4.053523] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/dev_ros2_packages.txt\n'}
+[4.053713] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/zephyr/list_apps.sh\n'}
+[4.053781] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/utils.sh\n'}
+[4.053966] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host\n'}
+[4.054146] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/dev_uros_packages.repos\n'}
+[4.054303] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/client_ros2_packages.txt\n'}
+[4.054495] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/generic\n'}
+[4.054685] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/generic/flash.sh\n'}
+[4.054882] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/generic/build.sh\n'}
+[4.055196] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/generic/client_host_packages.repos\n'}
+[4.055401] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/generic/client-host-colcon.meta\n'}
+[4.055467] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/generic/package.xml\n'}
+[4.055516] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/generic/create.sh\n'}
+[4.055823] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/host/dev_ros2_packages.txt\n'}
+[4.056032] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/agent_uros_packages.repos\n'}
+[4.056105] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib\n'}
+[4.056477] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/dev_uros_packages.repos\n'}
+[4.056925] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/generic\n'}
+[4.057545] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/flash.sh\n'}
+[4.057613] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/client-colcon.meta\n'}
+[4.058150] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/build.sh\n'}
+[4.058207] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/demo_toolchain.cmake\n'}
+[4.058257] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/package.xml\n'}
+[4.059033] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/client_uros_packages.repos\n'}
+[4.059090] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/create.sh\n'}
+[4.059732] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/generate_lib/dev_ros2_packages.txt\n'}
+[4.060259] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos\n'}
+[4.060317] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi\n'}
+[4.060692] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/flash.sh\n'}
+[4.060745] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/client-colcon.meta\n'}
+[4.060792] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/board.repos\n'}
+[4.061071] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/build.sh\n'}
+[4.062954] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/package.xml\n'}
+[4.063092] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/client_uros_packages.repos\n'}
+[4.066832] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/configure.sh\n'}
+[4.066891] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/create.sh\n'}
+[4.066940] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/dev_uros_packages.repos\n'}
+[4.066994] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/dev_ros2_packages.txt\n'}
+[4.067041] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21\n'}
+[4.067088] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/flash.sh\n'}
+[4.067140] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/client-colcon.meta\n'}
+[4.068753] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/board.repos\n'}
+[4.068834] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/build.sh\n'}
+[4.069010] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/package.xml\n'}
+[4.069079] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/client_uros_packages.repos\n'}
+[4.069141] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/configure.sh\n'}
+[4.069201] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/create.sh\n'}
+[4.071130] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg\n'}
+[4.071239] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/flash.sh\n'}
+[4.071295] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/client-colcon.meta\n'}
+[4.071374] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/board.repos\n'}
+[4.071427] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/build.sh\n'}
+[4.071477] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/package.xml\n'}
+[4.071752] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/client_uros_packages.repos\n'}
+[4.071843] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/configure.sh\n'}
+[4.071897] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/create.sh\n'}
+[4.071946] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/list_apps.sh\n'}
+[4.071993] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407\n'}
+[4.072038] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/flash.sh\n'}
+[4.072083] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/client-colcon.meta\n'}
+[4.072335] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/board.repos\n'}
+[4.072496] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/build.sh\n'}
+[4.072894] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/package.xml\n'}
+[4.073447] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/client_uros_packages.repos\n'}
+[4.073532] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/configure.sh\n'}
+[4.073997] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/create.sh\n'}
+[4.074202] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re\n'}
+[4.074289] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/flash.sh\n'}
+[4.074507] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/client-colcon.meta\n'}
+[4.074584] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/board.repos\n'}
+[4.074851] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/build.sh\n'}
+[4.075048] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/package.xml\n'}
+[4.075250] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/client_uros_packages.repos\n'}
+[4.075332] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/configure.sh\n'}
+[4.075628] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/create.sh\n'}
+[4.075706] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze\n'}
+[4.075837] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/flash.sh\n'}
+[4.075906] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/client-colcon.meta\n'}
+[4.076182] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/board.repos\n'}
+[4.076337] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/build.sh\n'}
+[4.076692] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/package.xml\n'}
+[4.077098] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/client_uros_packages.repos\n'}
+[4.077193] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/configure.sh\n'}
+[4.077630] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/create.sh\n'}
+[4.077729] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32\n'}
+[4.077898] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/flash.sh\n'}
+[4.078078] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/client-colcon.meta\n'}
+[4.078272] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/board.repos\n'}
+[4.078469] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/build.sh\n'}
+[4.078655] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/package.xml\n'}
+[4.078844] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/client_uros_packages.repos\n'}
+[4.078907] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/README.md\n'}
+[4.079081] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/configure.sh\n'}
+[4.079319] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/freertos/esp32/create.sh\n'}
+[4.079515] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android\n'}
+[4.079576] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/dev_uros_packages.repos\n'}
+[4.079742] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/generic\n'}
+[4.079818] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/generic/flash.sh\n'}
+[4.087163] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/generic/client-colcon.meta\n'}
+[4.103497] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/generic/build.sh\n'}
+[4.103593] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/generic/package.xml\n'}
+[4.105695] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/generic/client_uros_packages.repos\n'}
+[4.105963] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/generic/create.sh\n'}
+[4.106920] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/android/dev_ros2_packages.txt\n'}
+[4.108166] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/agent_ros2_packages.txt\n'}
+[4.108432] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/./config/client_uros_packages.repos\n'}
+[4.108624] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_ws.sh\n'}
+[4.108826] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_agent_ws.sh\n'}
+[4.109022] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_firmware_ws.sh\n'}
+[4.109203] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/configure_firmware.sh\n'}
+[4.109950] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/flash_firmware.sh\n'}
+[4.110141] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/build_firmware.sh\n'}
+[4.110319] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/build_agent.sh\n'}
+[4.110582] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/yaml_filter.py\n'}
+[4.110778] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/clean_env.sh\n'}
+[4.110951] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/timbo/microros_v2/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/component\n'}
+[4.111083] (micro_ros_setup) CommandEnded: {'returncode': 0}
+[4.153563] (-) TimerEvent: {}
+[4.256566] (-) TimerEvent: {}
+[4.357537] (-) TimerEvent: {}
+[4.427096] (micro_ros_setup) JobEnded: {'identifier': 'micro_ros_setup', 'rc': 0}
+[4.428923] (-) EventReactorShutdown: {}
