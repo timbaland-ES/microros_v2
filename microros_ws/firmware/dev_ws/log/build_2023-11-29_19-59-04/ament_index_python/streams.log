@@ -1,0 +1,54 @@
+[1.090s] Invoking command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_index/ament_index_python': AMENT_PREFIX_PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/bin:${PATH} PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint/lib/python3.10/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_index_python build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/install.log --single-version-externally-managed
+[1.356s] running egg_info
+[1.359s] creating ../../../build/ament_index_python/ament_index_python.egg-info
+[1.390s] writing ../../../build/ament_index_python/ament_index_python.egg-info/PKG-INFO
+[1.393s] writing dependency_links to ../../../build/ament_index_python/ament_index_python.egg-info/dependency_links.txt
+[1.393s] writing entry points to ../../../build/ament_index_python/ament_index_python.egg-info/entry_points.txt
+[1.393s] writing requirements to ../../../build/ament_index_python/ament_index_python.egg-info/requires.txt
+[1.393s] writing top-level names to ../../../build/ament_index_python/ament_index_python.egg-info/top_level.txt
+[1.394s] writing manifest file '../../../build/ament_index_python/ament_index_python.egg-info/SOURCES.txt'
+[1.395s] reading manifest file '../../../build/ament_index_python/ament_index_python.egg-info/SOURCES.txt'
+[1.395s] writing manifest file '../../../build/ament_index_python/ament_index_python.egg-info/SOURCES.txt'
+[1.395s] running build
+[1.395s] running build_py
+[1.395s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build
+[1.396s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib
+[1.396s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python
+[1.396s] copying ament_index_python/constants.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python
+[1.396s] copying ament_index_python/resources.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python
+[1.396s] copying ament_index_python/search_paths.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python
+[1.396s] copying ament_index_python/packages.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python
+[1.396s] copying ament_index_python/cli.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python
+[1.396s] copying ament_index_python/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python
+[1.396s] running install
+[1.396s] running install_lib
+[1.396s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python
+[1.396s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python/constants.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python
+[1.396s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python/resources.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python
+[1.396s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python/search_paths.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python
+[1.396s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python/packages.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python
+[1.396s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python/cli.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python
+[1.397s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build/lib/ament_index_python/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python
+[1.397s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python/constants.py to constants.cpython-310.pyc
+[1.397s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python/resources.py to resources.cpython-310.pyc
+[1.397s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python/search_paths.py to search_paths.cpython-310.pyc
+[1.397s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python/packages.py to packages.cpython-310.pyc
+[1.397s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python/cli.py to cli.cpython-310.pyc
+[1.397s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python/__init__.py to __init__.cpython-310.pyc
+[1.397s] running install_data
+[1.397s] copying package.xml -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/share/ament_index_python
+[1.397s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/share/ament_index_python/environment
+[1.397s] copying completion/ament_index-argcomplete.bash -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/share/ament_index_python/environment
+[1.397s] copying completion/ament_index-argcomplete.zsh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/share/ament_index_python/environment
+[1.397s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/share/ament_index
+[1.397s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.397s]   warnings.warn(
+[1.397s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/share/ament_index/resource_index
+[1.397s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/share/ament_index/resource_index/packages
+[1.397s] copying resource/ament_index_python -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/share/ament_index/resource_index/packages
+[1.397s] running install_egg_info
+[1.397s] Copying ../../../build/ament_index_python/ament_index_python.egg-info to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages/ament_index_python-1.5.2-py3.10.egg-info
+[1.398s] running install_scripts
+[1.439s] Installing ament_index script to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/bin
+[1.439s] writing list of installed files to '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/install.log'
+[1.514s] Invoked command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_index/ament_index_python' returned '0': AMENT_PREFIX_PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/bin:${PATH} PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_index_python/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint/lib/python3.10/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_index_python build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_index_python/install.log --single-version-externally-managed

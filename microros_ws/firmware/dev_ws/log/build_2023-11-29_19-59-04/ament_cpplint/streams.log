@@ -1,0 +1,42 @@
+[0.962s] Invoking command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_lint/ament_cpplint': AMENT_PREFIX_PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/bin:${PATH} PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint/lib/python3.10/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_cpplint build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/install.log --single-version-externally-managed
+[1.168s] running egg_info
+[1.168s] creating ../../../build/ament_cpplint/ament_cpplint.egg-info
+[1.168s] writing ../../../build/ament_cpplint/ament_cpplint.egg-info/PKG-INFO
+[1.168s] writing dependency_links to ../../../build/ament_cpplint/ament_cpplint.egg-info/dependency_links.txt
+[1.169s] writing entry points to ../../../build/ament_cpplint/ament_cpplint.egg-info/entry_points.txt
+[1.171s] writing requirements to ../../../build/ament_cpplint/ament_cpplint.egg-info/requires.txt
+[1.171s] writing top-level names to ../../../build/ament_cpplint/ament_cpplint.egg-info/top_level.txt
+[1.171s] writing manifest file '../../../build/ament_cpplint/ament_cpplint.egg-info/SOURCES.txt'
+[1.171s] reading manifest file '../../../build/ament_cpplint/ament_cpplint.egg-info/SOURCES.txt'
+[1.172s] writing manifest file '../../../build/ament_cpplint/ament_cpplint.egg-info/SOURCES.txt'
+[1.172s] running build
+[1.172s] running build_py
+[1.173s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build
+[1.173s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build/lib
+[1.173s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build/lib/ament_cpplint
+[1.173s] copying ament_cpplint/main.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build/lib/ament_cpplint
+[1.173s] copying ament_cpplint/cpplint.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build/lib/ament_cpplint
+[1.174s] copying ament_cpplint/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build/lib/ament_cpplint
+[1.174s] running install
+[1.178s] running install_lib
+[1.178s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.178s]   warnings.warn(
+[1.179s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages/ament_cpplint
+[1.179s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build/lib/ament_cpplint/main.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages/ament_cpplint
+[1.180s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build/lib/ament_cpplint/cpplint.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages/ament_cpplint
+[1.206s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build/lib/ament_cpplint/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages/ament_cpplint
+[1.241s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages/ament_cpplint/main.py to main.cpython-310.pyc
+[1.242s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages/ament_cpplint/cpplint.py to cpplint.cpython-310.pyc
+[1.242s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages/ament_cpplint/__init__.py to __init__.cpython-310.pyc
+[1.242s] running install_data
+[1.242s] copying package.xml -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/share/ament_cpplint
+[1.242s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/share/ament_index
+[1.242s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/share/ament_index/resource_index
+[1.242s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/share/ament_index/resource_index/packages
+[1.243s] copying resource/ament_cpplint -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/share/ament_index/resource_index/packages
+[1.243s] running install_egg_info
+[1.243s] Copying ../../../build/ament_cpplint/ament_cpplint.egg-info to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages/ament_cpplint-0.14.2-py3.10.egg-info
+[1.244s] running install_scripts
+[1.244s] Installing ament_cpplint script to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/bin
+[1.244s] writing list of installed files to '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/install.log'
+[1.314s] Invoked command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_lint/ament_cpplint' returned '0': AMENT_PREFIX_PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/bin:${PATH} PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cpplint/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint/lib/python3.10/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_cpplint build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cpplint/install.log --single-version-externally-managed

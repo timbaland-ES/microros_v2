@@ -1,0 +1,42 @@
+[0.789s] Invoking command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_lint/ament_lint_cmake': AMENT_PREFIX_PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/bin:${PATH} PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint/lib/python3.10/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_lint_cmake build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/install.log --single-version-externally-managed
+[1.034s] running egg_info
+[1.034s] creating ../../../build/ament_lint_cmake/ament_lint_cmake.egg-info
+[1.034s] writing ../../../build/ament_lint_cmake/ament_lint_cmake.egg-info/PKG-INFO
+[1.034s] writing dependency_links to ../../../build/ament_lint_cmake/ament_lint_cmake.egg-info/dependency_links.txt
+[1.034s] writing entry points to ../../../build/ament_lint_cmake/ament_lint_cmake.egg-info/entry_points.txt
+[1.034s] writing requirements to ../../../build/ament_lint_cmake/ament_lint_cmake.egg-info/requires.txt
+[1.034s] writing top-level names to ../../../build/ament_lint_cmake/ament_lint_cmake.egg-info/top_level.txt
+[1.036s] writing manifest file '../../../build/ament_lint_cmake/ament_lint_cmake.egg-info/SOURCES.txt'
+[1.037s] reading manifest file '../../../build/ament_lint_cmake/ament_lint_cmake.egg-info/SOURCES.txt'
+[1.040s] writing manifest file '../../../build/ament_lint_cmake/ament_lint_cmake.egg-info/SOURCES.txt'
+[1.040s] running build
+[1.040s] running build_py
+[1.050s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build
+[1.050s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build/lib
+[1.050s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build/lib/ament_lint_cmake
+[1.050s] copying ament_lint_cmake/cmakelint.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build/lib/ament_lint_cmake
+[1.050s] copying ament_lint_cmake/main.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build/lib/ament_lint_cmake
+[1.053s] copying ament_lint_cmake/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build/lib/ament_lint_cmake
+[1.053s] running install
+[1.054s] running install_lib
+[1.054s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages/ament_lint_cmake
+[1.054s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build/lib/ament_lint_cmake/cmakelint.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages/ament_lint_cmake
+[1.054s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build/lib/ament_lint_cmake/main.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages/ament_lint_cmake
+[1.054s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build/lib/ament_lint_cmake/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages/ament_lint_cmake
+[1.054s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages/ament_lint_cmake/cmakelint.py to cmakelint.cpython-310.pyc
+[1.054s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages/ament_lint_cmake/main.py to main.cpython-310.pyc
+[1.054s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages/ament_lint_cmake/__init__.py to __init__.cpython-310.pyc
+[1.054s] running install_data
+[1.054s] copying package.xml -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/share/ament_lint_cmake
+[1.054s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/share/ament_index
+[1.055s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/share/ament_index/resource_index
+[1.055s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/share/ament_index/resource_index/packages
+[1.055s] copying resource/ament_lint_cmake -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/share/ament_index/resource_index/packages
+[1.055s] running install_egg_info
+[1.055s] Copying ../../../build/ament_lint_cmake/ament_lint_cmake.egg-info to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages/ament_lint_cmake-0.14.2-py3.10.egg-info
+[1.055s] running install_scripts
+[1.055s] Installing ament_lint_cmake script to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/bin
+[1.055s] writing list of installed files to '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/install.log'
+[1.055s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.055s]   warnings.warn(
+[1.190s] Invoked command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_lint/ament_lint_cmake' returned '0': AMENT_PREFIX_PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/bin:${PATH} PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint_cmake/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint/lib/python3.10/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_lint_cmake build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_lint_cmake/install.log --single-version-externally-managed

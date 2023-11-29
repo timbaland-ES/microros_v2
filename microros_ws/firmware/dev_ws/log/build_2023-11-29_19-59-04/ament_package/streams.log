@@ -1,0 +1,102 @@
+[2.648s] Invoking command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_package': PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../build/ament_package build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/install.log --single-version-externally-managed
+[2.826s] running egg_info
+[2.827s] creating ../../build/ament_package/ament_package.egg-info
+[2.828s] writing ../../build/ament_package/ament_package.egg-info/PKG-INFO
+[2.828s] writing dependency_links to ../../build/ament_package/ament_package.egg-info/dependency_links.txt
+[2.828s] writing top-level names to ../../build/ament_package/ament_package.egg-info/top_level.txt
+[2.828s] writing manifest file '../../build/ament_package/ament_package.egg-info/SOURCES.txt'
+[2.862s] reading manifest file '../../build/ament_package/ament_package.egg-info/SOURCES.txt'
+[2.862s] adding license file 'LICENSE'
+[2.862s] writing manifest file '../../build/ament_package/ament_package.egg-info/SOURCES.txt'
+[2.863s] running build
+[2.863s] running build_py
+[2.863s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build
+[2.863s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib
+[2.863s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package
+[2.863s] copying ament_package/templates.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package
+[2.863s] copying ament_package/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package
+[2.863s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template
+[2.863s] copying ament_package/template/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template
+[2.863s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level
+[2.864s] copying ament_package/template/package_level/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level
+[2.864s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.864s] copying ament_package/template/environment_hook/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.864s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.864s] copying ament_package/template/prefix_level/_local_setup_util.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.864s] copying ament_package/template/prefix_level/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.864s] copying ament_package/template/environment_hook/pythonpath.bat.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.864s] copying ament_package/template/environment_hook/ament_prefix_path.bat -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.864s] copying ament_package/template/environment_hook/ament_prefix_path.sh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.865s] copying ament_package/template/environment_hook/pythonpath.sh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.865s] copying ament_package/template/environment_hook/path.bat -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.865s] copying ament_package/template/environment_hook/library_path.sh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.865s] copying ament_package/template/environment_hook/path.sh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.865s] copying ament_package/template/environment_hook/pkg_config_path.sh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.866s] copying ament_package/template/environment_hook/pkg_config_path.bat -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook
+[2.866s] copying ament_package/template/package_level/local_setup.bat.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level
+[2.866s] copying ament_package/template/package_level/local_setup.zsh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level
+[2.866s] copying ament_package/template/package_level/local_setup.bash.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level
+[2.866s] copying ament_package/template/package_level/local_setup.sh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level
+[2.866s] copying ament_package/template/prefix_level/local_setup.bash -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.866s] copying ament_package/template/prefix_level/local_setup.zsh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.866s] copying ament_package/template/prefix_level/setup.zsh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.866s] copying ament_package/template/prefix_level/setup.bat.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.866s] copying ament_package/template/prefix_level/setup.bash -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.867s] copying ament_package/template/prefix_level/local_setup.bat.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.867s] copying ament_package/template/prefix_level/setup.sh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.867s] copying ament_package/template/prefix_level/local_setup.sh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level
+[2.867s] running install
+[2.867s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.867s]   warnings.warn(
+[2.868s] running install_lib
+[2.868s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package
+[2.868s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template
+[2.868s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/package_level
+[2.868s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level/local_setup.bat.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/package_level
+[2.890s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level/local_setup.zsh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/package_level
+[2.890s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level/local_setup.bash.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/package_level
+[2.890s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/package_level
+[2.890s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/package_level/local_setup.sh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/package_level
+[2.891s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.891s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/pythonpath.bat.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.892s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/ament_prefix_path.bat -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.892s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/ament_prefix_path.sh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.893s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/pythonpath.sh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.893s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/path.bat -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.894s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/library_path.sh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.894s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/path.sh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.894s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.894s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/pkg_config_path.sh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/environment_hook/pkg_config_path.bat -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook
+[2.895s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/local_setup.bash -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/local_setup.zsh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/setup.zsh -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/setup.bat.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/setup.bash -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/local_setup.bat.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/_local_setup_util.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/setup.sh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/prefix_level/local_setup.sh.in -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level
+[2.895s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/template/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template
+[2.896s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/templates.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package
+[2.896s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build/lib/ament_package/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package
+[2.896s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/package_level/__init__.py to __init__.cpython-310.pyc
+[2.896s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook/__init__.py to __init__.cpython-310.pyc
+[2.896s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level/_local_setup_util.py to _local_setup_util.cpython-310.pyc
+[2.896s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/prefix_level/__init__.py to __init__.cpython-310.pyc
+[2.896s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/template/__init__.py to __init__.cpython-310.pyc
+[2.896s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/templates.py to templates.cpython-310.pyc
+[2.896s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package/__init__.py to __init__.cpython-310.pyc
+[2.896s] running install_data
+[2.897s] copying package.xml -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/share/ament_package
+[2.897s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/share/ament_index
+[2.897s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/share/ament_index/resource_index
+[2.897s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/share/ament_index/resource_index/packages
+[2.897s] copying resource/ament_package -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/share/ament_index/resource_index/packages
+[2.897s] running install_egg_info
+[2.897s] Copying ../../build/ament_package/ament_package.egg-info to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages/ament_package-0.15.3-py3.10.egg-info
+[2.897s] running install_scripts
+[2.906s] writing list of installed files to '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/install.log'
+[3.088s] Invoked command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_package' returned '0': PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_package/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../build/ament_package build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_package/install.log --single-version-externally-managed

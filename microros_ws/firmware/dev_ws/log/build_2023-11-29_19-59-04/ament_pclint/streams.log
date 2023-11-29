@@ -1,0 +1,81 @@
+[1.307s] Invoking command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_lint/ament_pclint': AMENT_PREFIX_PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/bin:${PATH} PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint/lib/python3.10/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_pclint build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/install.log --single-version-externally-managed
+[1.546s] running egg_info
+[1.556s] creating ../../../build/ament_pclint/ament_pclint.egg-info
+[1.556s] writing ../../../build/ament_pclint/ament_pclint.egg-info/PKG-INFO
+[1.556s] writing dependency_links to ../../../build/ament_pclint/ament_pclint.egg-info/dependency_links.txt
+[1.556s] writing entry points to ../../../build/ament_pclint/ament_pclint.egg-info/entry_points.txt
+[1.556s] writing requirements to ../../../build/ament_pclint/ament_pclint.egg-info/requires.txt
+[1.556s] writing top-level names to ../../../build/ament_pclint/ament_pclint.egg-info/top_level.txt
+[1.556s] writing manifest file '../../../build/ament_pclint/ament_pclint.egg-info/SOURCES.txt'
+[1.556s] reading manifest file '../../../build/ament_pclint/ament_pclint.egg-info/SOURCES.txt'
+[1.557s] writing manifest file '../../../build/ament_pclint/ament_pclint.egg-info/SOURCES.txt'
+[1.557s] running build
+[1.557s] running build_py
+[1.557s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build
+[1.557s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib
+[1.557s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint
+[1.557s] copying ament_pclint/main.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint
+[1.559s] copying ament_pclint/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint
+[1.559s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config
+[1.559s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.560s] copying ament_pclint/config/gcc/co-g++.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.560s] copying ament_pclint/config/gcc/co-g++.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.560s] copying ament_pclint/config/gcc/co-gcc.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.560s] copying ament_pclint/config/gcc/co-gcc.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.560s] copying ament_pclint/config/gcc/co-osx-g++.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.561s] copying ament_pclint/config/gcc/co-osx-g++.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.561s] copying ament_pclint/config/gcc/co-osx-gcc.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.561s] copying ament_pclint/config/gcc/co-osx-gcc.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc
+[1.561s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/msvc
+[1.561s] copying ament_pclint/config/msvc/co-cl.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/msvc
+[1.561s] copying ament_pclint/config/msvc/co-cl++.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/msvc
+[1.562s] copying ament_pclint/config/msvc/co-cl.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/msvc
+[1.562s] copying ament_pclint/config/au-misra3.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config
+[1.563s] copying ament_pclint/config/au-misra3-amd1.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config
+[1.563s] copying ament_pclint/config/au-misra-cpp.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config
+[1.563s] copying ament_pclint/config/c99.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config
+[1.564s] copying ament_pclint/config/c++.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config
+[1.564s] copying ament_pclint/config/deprecate.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config
+[1.564s] copying ament_pclint/config/env-xml.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config
+[1.564s] running install
+[1.564s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.564s]   warnings.warn(
+[1.568s] running install_lib
+[1.569s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint
+[1.569s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config
+[1.569s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/msvc
+[1.571s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/msvc/co-cl.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/msvc
+[1.571s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/msvc/co-cl++.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/msvc
+[1.572s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/msvc/co-cl.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/msvc
+[1.572s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/deprecate.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config
+[1.572s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.572s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc/co-g++.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.572s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc/co-osx-gcc.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.575s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc/co-osx-g++.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.576s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc/co-gcc.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.576s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc/co-osx-g++.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.576s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc/co-osx-gcc.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.576s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc/co-g++.h -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.576s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/gcc/co-gcc.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config/gcc
+[1.576s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/c++.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config
+[1.577s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/au-misra-cpp.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config
+[1.577s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/au-misra3-amd1.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config
+[1.577s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/c99.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config
+[1.577s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/env-xml.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config
+[1.577s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/config/au-misra3.lnt -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/config
+[1.577s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/main.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint
+[1.577s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build/lib/ament_pclint/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint
+[1.577s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/main.py to main.cpython-310.pyc
+[1.580s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint/__init__.py to __init__.cpython-310.pyc
+[1.580s] running install_data
+[1.581s] copying package.xml -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/share/ament_pclint
+[1.581s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/share/ament_index
+[1.581s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/share/ament_index/resource_index
+[1.581s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/share/ament_index/resource_index/packages
+[1.581s] copying resource/ament_pclint -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/share/ament_index/resource_index/packages
+[1.581s] running install_egg_info
+[1.582s] Copying ../../../build/ament_pclint/ament_pclint.egg-info to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages/ament_pclint-0.14.2-py3.10.egg-info
+[1.583s] running install_scripts
+[1.603s] Installing ament_pclint script to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/bin
+[1.603s] writing list of installed files to '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/install.log'
+[1.631s] Invoked command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_lint/ament_pclint' returned '0': AMENT_PREFIX_PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint PATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/bin:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/bin:${PATH} PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pclint/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_copyright/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_pep257/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_flake8/lib/python3.10/site-packages:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_lint/lib/python3.10/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_pclint build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_pclint/install.log --single-version-externally-managed

@@ -1,0 +1,39 @@
+[2.536s] Invoking command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_lint/ament_cppcheck': PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_cppcheck build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/install.log --single-version-externally-managed
+[2.749s] running egg_info
+[2.750s] creating ../../../build/ament_cppcheck/ament_cppcheck.egg-info
+[2.750s] writing ../../../build/ament_cppcheck/ament_cppcheck.egg-info/PKG-INFO
+[2.750s] writing dependency_links to ../../../build/ament_cppcheck/ament_cppcheck.egg-info/dependency_links.txt
+[2.750s] writing entry points to ../../../build/ament_cppcheck/ament_cppcheck.egg-info/entry_points.txt
+[2.751s] writing requirements to ../../../build/ament_cppcheck/ament_cppcheck.egg-info/requires.txt
+[2.751s] writing top-level names to ../../../build/ament_cppcheck/ament_cppcheck.egg-info/top_level.txt
+[2.751s] writing manifest file '../../../build/ament_cppcheck/ament_cppcheck.egg-info/SOURCES.txt'
+[2.751s] reading manifest file '../../../build/ament_cppcheck/ament_cppcheck.egg-info/SOURCES.txt'
+[2.751s] writing manifest file '../../../build/ament_cppcheck/ament_cppcheck.egg-info/SOURCES.txt'
+[2.751s] running build
+[2.752s] running build_py
+[2.752s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build
+[2.752s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build/lib
+[2.752s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build/lib/ament_cppcheck
+[2.752s] copying ament_cppcheck/main.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build/lib/ament_cppcheck
+[2.752s] copying ament_cppcheck/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build/lib/ament_cppcheck
+[2.752s] running install
+[2.753s] running install_lib
+[2.753s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/lib/python3.10/site-packages/ament_cppcheck
+[2.753s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build/lib/ament_cppcheck/main.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/lib/python3.10/site-packages/ament_cppcheck
+[2.753s] copying /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build/lib/ament_cppcheck/__init__.py -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/lib/python3.10/site-packages/ament_cppcheck
+[2.755s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.755s]   warnings.warn(
+[2.782s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/lib/python3.10/site-packages/ament_cppcheck/main.py to main.cpython-310.pyc
+[2.782s] byte-compiling /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/lib/python3.10/site-packages/ament_cppcheck/__init__.py to __init__.cpython-310.pyc
+[2.782s] running install_data
+[2.782s] copying package.xml -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/share/ament_cppcheck
+[2.782s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/share/ament_index
+[2.782s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/share/ament_index/resource_index
+[2.783s] creating /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/share/ament_index/resource_index/packages
+[2.783s] copying resource/ament_cppcheck -> /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/share/ament_index/resource_index/packages
+[2.783s] running install_egg_info
+[2.783s] Copying ../../../build/ament_cppcheck/ament_cppcheck.egg-info to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/lib/python3.10/site-packages/ament_cppcheck-0.14.2-py3.10.egg-info
+[2.783s] running install_scripts
+[2.799s] Installing ament_cppcheck script to /home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/bin
+[2.799s] writing list of installed files to '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/install.log'
+[2.919s] Invoked command in '/home/timbo/microros_v2/microros_ws/firmware/dev_ws/ament/ament_lint/ament_cppcheck' returned '0': PYTHONPATH=/home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/prefix_override:/home/timbo/microros_v2/microros_ws/firmware/dev_ws/install/ament_cppcheck/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ament_cppcheck build --build-base /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/build install --record /home/timbo/microros_v2/microros_ws/firmware/dev_ws/build/ament_cppcheck/install.log --single-version-externally-managed
