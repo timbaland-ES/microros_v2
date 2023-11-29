@@ -1,0 +1,4 @@
+microros_ws/log
+microros_ws/firmware/mcu_ws/log
+#microros_ws/firmware/mcu_ws/install
+microros_ws/firmware/mcu_ws/build/
