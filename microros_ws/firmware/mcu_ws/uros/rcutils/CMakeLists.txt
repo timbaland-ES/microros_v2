@@ -38,7 +38,7 @@ endif()
 
 if(NOT RCUTILS_MICROROS AND (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
   # enables building a static library but later link it into a dynamic library
-  add_compile_options(-fPIC)
+  #add_compile_options(-fPIC) BittlT: commented out
 endif()
 if(NOT WIN32)
   # About -Wno-sign-conversion: With Clang, -Wconversion implies -Wsign-conversion. There are a number of

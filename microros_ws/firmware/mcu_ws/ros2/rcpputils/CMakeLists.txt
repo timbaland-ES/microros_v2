@@ -17,7 +17,7 @@ endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   # enables building a static library but later link it into a dynamic library
-  add_compile_options(-fPIC)
+  #add_compile_options(-fPIC) BittlT: commented out
 endif()
 if(NOT WIN32)
   add_compile_options(-Wall -Wextra -Wpedantic)
