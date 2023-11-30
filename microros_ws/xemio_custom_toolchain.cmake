@@ -1,4 +1,4 @@
-#Kommando zum bauen: ros2 run micro_ros_setup build_firmware.sh $(pwd)/xemio_custom_toolchain.cmake $(pwd)/xemio_custom_colcon.meta
+#Kommando zum bauen: giros2 run micro_ros_setup build_firmware.sh $(pwd)/xemio_custom_toolchain.cmake $(pwd)/xemio_custom_colcon.meta
 
 #project(MyProjectName LANGUAGES C CXX) #Eigene Ergänzung. Anscheinend wird dadurch C aktiviert... erzeugt aber Fehler...
 
@@ -30,7 +30,7 @@ message(STATUS "Verwende das Toolchain File von BittlT  1")
 
 
 #verwendet - Versuch2: jetzt nur wesentliches von XEMIO:
-set(CMAKE_C_FLAGS "-msmall-const=0 -Wall -Wextra -Wdiv-by-zero -Warray-bounds -Wcast-align -Wignored-qualifiers -Wformat -Wformat-security -mcpu=tc38xx -mversion-info -fno-common -fno-short-enums -fshort-double -fsingle-precision-constant -fstrict-volatile-bitfields -ffunction-sections -fdata-sections -std=c99 -g" CACHE STRING "" FORCE)
+set(CMAKE_C_FLAGS "-msmall-const=0 -Wall -Wextra -Wdiv-by-zero -Warray-bounds -Wcast-align -Wignored-qualifiers -Wformat -Wformat-security -mcpu=tc38xx -mversion-info -fno-common -fno-short-enums -fshort-double -fsingle-precision-constant -fstrict-volatile-bitfields -ffunction-sections -fdata-sections -std=c99 -g -DCLOCK_MONOTONIC=0" CACHE STRING "" FORCE)
 
 
 #Versuch 3: möglichst wenig Flags verwenden von Xemio:
