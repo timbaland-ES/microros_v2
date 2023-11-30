@@ -30,7 +30,8 @@ message(STATUS "Verwende das Toolchain File von BittlT  1")
 
 
 #verwendet - Versuch2: jetzt nur wesentliches von XEMIO:
-set(CMAKE_C_FLAGS "-msmall-const=0 -Wall -Wextra -Wdiv-by-zero -Warray-bounds -Wcast-align -Wignored-qualifiers -Wformat -Wformat-security -mcpu=tc38xx -mversion-info -fno-common -fno-short-enums -fshort-double -fsingle-precision-constant -fstrict-volatile-bitfields -ffunction-sections -fdata-sections -std=c99 -mcode-pic -g" CACHE STRING "" FORCE)
+set(CMAKE_C_FLAGS "-msmall-const=0 -Wall -Wextra -Wdiv-by-zero -Warray-bounds -Wcast-align -Wignored-qualifiers -Wformat -Wformat-security -mcpu=tc38xx -mversion-info -fno-common -fno-short-enums -fshort-double -fsingle-precision-constant -fstrict-volatile-bitfields -ffunction-sections -fdata-sections -std=c99 -g" CACHE STRING "" FORCE)
+
 
 #Versuch 3: möglichst wenig Flags verwenden von Xemio:
 
