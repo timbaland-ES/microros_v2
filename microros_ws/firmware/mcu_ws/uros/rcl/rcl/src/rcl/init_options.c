@@ -26,6 +26,9 @@ extern "C"
 #include "rmw/error_handling.h"
 #include "rcutils/logging_macros.h"
 
+//BittlT: replacement for dynamic memory allocation:
+rcl_init_options_impl_t init_options_impl;
+
 rcl_init_options_t
 rcl_get_zero_initialized_init_options(void)
 {
@@ -39,7 +42,12 @@ static inline
 rcl_ret_t
 _rcl_init_options_zero_init(rcl_init_options_t * init_options, rcl_allocator_t allocator)
 {
+  //BittlT: replacement for dynamic memory allocation
+  /*
   init_options->impl = allocator.allocate(sizeof(rcl_init_options_impl_t), allocator.state);
+  */
+  init_options->impl = &init_options_impl;
+
   RCL_CHECK_FOR_NULL_WITH_MSG(
     init_options->impl,
     "failed to allocate memory for init options impl",
@@ -140,7 +148,8 @@ rcl_init_options_fini(rcl_init_options_t * init_options)
     RCL_SET_ERROR_MSG(rmw_get_error_string().str);
     return rcl_convert_rmw_ret_to_rcl_ret(rmw_ret);
   }
-  allocator.deallocate(init_options->impl, allocator.state);
+  //BittlT: deallocation not necessary anymore, because dynamic memory allocation was deactivated
+  //allocator.deallocate(init_options->impl, allocator.state);
   return RCL_RET_OK;
 }
 
