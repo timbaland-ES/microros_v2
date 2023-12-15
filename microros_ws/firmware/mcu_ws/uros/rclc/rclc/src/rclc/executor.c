@@ -33,6 +33,9 @@
 // default timeout for rcl_wait() is 1000ms
 #define DEFAULT_WAIT_TIMEOUT_NS 1000000000
 
+//BittlT: replacement for dynamic memory allocation:
+rclc_executor_handle_t executorHandle;
+
 // declarations of helper functions
 /*
 /// get new data from DDS queue for handle i
@@ -118,11 +121,18 @@ rclc_executor_init(
   executor->wait_set = rcl_get_zero_initialized_wait_set();
   executor->allocator = allocator;
   executor->timeout_ns = DEFAULT_WAIT_TIMEOUT_NS;
+  
+  /*
+  //BittlT: replacement for dynamic memory allocation
   // allocate memory for the array
   executor->handles =
     executor->allocator->allocate(
     (number_of_handles * sizeof(rclc_executor_handle_t)),
     executor->allocator->state);
+  */
+ executor->handles = &executorHandle;
+
+
   if (NULL == executor->handles) {
     RCL_SET_ERROR_MSG("Could not allocate memory for 'handles'.");
     return RCL_RET_BAD_ALLOC;
