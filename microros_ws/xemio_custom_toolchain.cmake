@@ -1,5 +1,7 @@
 #Kommando zum bauen: ros2 run micro_ros_setup build_firmware.sh $(pwd)/xemio_custom_toolchain.cmake $(pwd)/xemio_custom_colcon.meta
 
+#zum sourcen der bash: source install/local_setup.bash oder source /opt/ros/humble/setup.bash
+
 #project(MyProjectName LANGUAGES C CXX) #Eigene Ergänzung. Anscheinend wird dadurch C aktiviert... erzeugt aber Fehler...
 
 set(CMAKE_SYSTEM_NAME Generic)	   			#okay, da Cross-Compiling
