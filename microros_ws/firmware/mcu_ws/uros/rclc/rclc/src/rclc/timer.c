@@ -19,6 +19,7 @@
 #include <rcl/error_handling.h>
 #include <rcutils/logging_macros.h>
 
+
 rcl_ret_t
 rclc_timer_init_default(
   rcl_timer_t * timer,
@@ -32,6 +33,13 @@ rclc_timer_init_default(
     support, "support is a null pointer", return RCL_RET_INVALID_ARGUMENT);
 
   (*timer) = rcl_get_zero_initialized_timer();
+
+//BittlT: temporare way to avoid an error. The allocate-structure is initialized with garbage-values, because it is not implemented.
+//The dynamic memory allocation was replaced by global variables. With the pseudo-value 0x40000000 an error is avoided when trying 
+//to access the function-pointers in the allocator-structure. This doesn´t has negative influence on the program because the allocator is not used any more
+rcl_allocator_t *allocator_temp_fix = (rcl_allocator_t *)0x40000000;
+support->allocator = allocator_temp_fix;
+
   rcl_ret_t rc = rcl_timer_init(
     timer,
     &support->clock,
