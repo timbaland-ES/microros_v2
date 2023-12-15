@@ -25,11 +25,11 @@ pushd $FW_TARGETDIR/mcu_ws >/dev/null
 
 	rm -rf build install log
 	#BittlT: --event-handlers ... hinzugefügt für höhere verbosity
+	#--event-handlers console_direct+ console_cohesion+ console_package_list+ \
    	colcon build \
 		--merge-install \
 		--packages-ignore-regex=.*_cpp \
 		--metas $COLCON_META \
-		--event-handlers console_direct+ console_cohesion+ console_package_list+ \
 		--cmake-args \
 		"--no-warn-unused-cli" \
 		-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=OFF \
