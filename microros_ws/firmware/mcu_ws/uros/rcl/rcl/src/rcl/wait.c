@@ -33,6 +33,9 @@ extern "C"
 
 #include "./context_impl.h"
 
+//BittlT: replacement for dynamic memory allocation:
+rcl_wait_set_impl_t wait_set_impl;
+
 struct rcl_wait_set_impl_s
 {
   // number of subscriptions that have been added to the wait set
@@ -94,7 +97,8 @@ __wait_set_clean_up(rcl_wait_set_t * wait_set)
   (void)ret;  // NO LINT
   assert(RCL_RET_OK == ret);  // Defensive, shouldn't fail with size 0.
   if (wait_set->impl) {
-    wait_set->impl->allocator.deallocate(wait_set->impl, wait_set->impl->allocator.state);
+    //BittlT: no deallocation necessary, because no dynamic memory allocation implemented. 
+    //wait_set->impl->allocator.deallocate(wait_set->impl, wait_set->impl->allocator.state);
     wait_set->impl = NULL;
   }
 }
@@ -132,9 +136,13 @@ rcl_wait_set_init(
       "either rcl_init() was not called or rcl_shutdown() was called.");
     return RCL_RET_NOT_INIT;
   }
+
+  //BittlT: replacement for dynamic memory allocation
   // Allocate space for the implementation struct.
-  wait_set->impl = (rcl_wait_set_impl_t *)allocator.allocate(
-    sizeof(rcl_wait_set_impl_t), allocator.state);
+  /*wait_set->impl = (rcl_wait_set_impl_t *)allocator.allocate(
+    sizeof(rcl_wait_set_impl_t), allocator.state);*/
+  wait_set->impl = &wait_set_impl;
+
   RCL_CHECK_FOR_NULL_WITH_MSG(
     wait_set->impl, "allocating memory failed", return RCL_RET_BAD_ALLOC);
   memset(wait_set->impl, 0, sizeof(rcl_wait_set_impl_t));
