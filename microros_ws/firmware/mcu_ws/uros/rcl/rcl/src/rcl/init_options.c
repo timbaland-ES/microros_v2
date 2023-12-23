@@ -27,7 +27,9 @@ extern "C"
 #include "rcutils/logging_macros.h"
 
 //BittlT: replacement for dynamic memory allocation:
-rcl_init_options_impl_t init_options_impl;
+rcl_init_options_impl_t init_options_first_impl;
+rcl_init_options_impl_t init_options_sec_impl;
+int init_options_impl_counter = 0;
 
 rcl_init_options_t
 rcl_get_zero_initialized_init_options(void)
@@ -43,10 +45,21 @@ rcl_ret_t
 _rcl_init_options_zero_init(rcl_init_options_t * init_options, rcl_allocator_t allocator)
 {
   //BittlT: replacement for dynamic memory allocation
+  //function is called two times. Therfore condition with two objects necessary
   /*
   init_options->impl = allocator.allocate(sizeof(rcl_init_options_impl_t), allocator.state);
   */
-  init_options->impl = &init_options_impl;
+  
+  if (init_options_impl_counter == 0){
+        init_options->impl = &init_options_first_impl;
+        init_options_impl_counter++;
+        }
+    else if (init_options_impl_counter == 1){
+        init_options->impl = &init_options_sec_impl;
+        init_options_impl_counter++;
+    }
+    else return RCL_RET_ERROR;
+
 
   RCL_CHECK_FOR_NULL_WITH_MSG(
     init_options->impl,
