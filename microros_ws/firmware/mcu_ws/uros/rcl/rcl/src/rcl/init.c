@@ -47,6 +47,9 @@ extern "C"
 #include "./context_impl.h"
 #include "./init_options_impl.h"
 
+//BittlT: replaced dynamic memory allocation
+rcl_context_impl_t contextImpl;
+
 rcl_ret_t
 rcl_init(
   int argc,
@@ -90,9 +93,12 @@ rcl_init(
   context->global_arguments = rcl_get_zero_initialized_arguments();
 #endif // RCL_MICROROS_COMPLETE_IMPL
 
+  //BittlT: dynamic memory allocation using "calloc" replaced by global variable
   // Setup impl for context.
   // use zero_allocate so the cleanup function will not try to clean up uninitialized parts later
-  context->impl = allocator.zero_allocate(1, sizeof(rcl_context_impl_t), allocator.state);
+  //context->impl = allocator.zero_allocate(1, sizeof(rcl_context_impl_t), allocator.state);
+  context->impl = &contextImpl;
+
   RCL_CHECK_FOR_NULL_WITH_MSG(
     context->impl, "failed to allocate memory for context impl", return RCL_RET_BAD_ALLOC);
 

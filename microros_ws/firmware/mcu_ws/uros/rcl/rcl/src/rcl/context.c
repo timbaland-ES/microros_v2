@@ -165,12 +165,13 @@ __cleanup_context(rcl_context_t * context)
       int64_t i;
       for (i = 0; i < context->impl->argc; ++i) {
         if (NULL != context->impl->argv[i]) {
-          allocator.deallocate(context->impl->argv[i], allocator.state);
+          //BittlT all deallocates commented out
+          //allocator.deallocate(context->impl->argv[i], allocator.state);
         }
       }
-      allocator.deallocate(context->impl->argv, allocator.state);
+      //allocator.deallocate(context->impl->argv, allocator.state);
     }
-    allocator.deallocate(context->impl, allocator.state);
+    //allocator.deallocate(context->impl, allocator.state);
   }  // if (NULL != context->impl)
 
   // zero-initialize the context

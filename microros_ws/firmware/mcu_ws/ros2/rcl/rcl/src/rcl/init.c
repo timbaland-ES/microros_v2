@@ -41,7 +41,13 @@ extern "C"
 #include "./context_impl.h"
 #include "./init_options_impl.h"
 
+//BittlT: replaced dynamic memory allocation
+rcl_context_impl_t contextImpl;
+
 static atomic_uint_least64_t __rcl_next_unique_id = ATOMIC_VAR_INIT(1);
+
+
+
 
 rcl_ret_t
 rcl_init(
@@ -84,9 +90,12 @@ rcl_init(
   // Zero initialize global arguments.
   context->global_arguments = rcl_get_zero_initialized_arguments();
 
+  //BittlT: dynamic memory allocation using "calloc" replaced by global variable
   // Setup impl for context.
   // use zero_allocate so the cleanup function will not try to clean up uninitialized parts later
-  context->impl = allocator.zero_allocate(1, sizeof(rcl_context_impl_t), allocator.state);
+  //context->impl = allocator.zero_allocate(1, sizeof(rcl_context_impl_t), allocator.state);
+  context->impl = &contextImpl;
+
   RCL_CHECK_FOR_NULL_WITH_MSG(
     context->impl, "failed to allocate memory for context impl", return RCL_RET_BAD_ALLOC);
 
@@ -107,6 +116,7 @@ rcl_init(
   context->impl->argc = argc;
   context->impl->argv = NULL;
   if (0 != argc && argv != NULL) {
+    //BittlT: TBD: dynamic memory allocation also should be replaced here! Important if rcl_init is run with arguments from command line
     context->impl->argv = (char **)allocator.zero_allocate(argc, sizeof(char *), allocator.state);
     RCL_CHECK_FOR_NULL_WITH_MSG(
       context->impl->argv,
