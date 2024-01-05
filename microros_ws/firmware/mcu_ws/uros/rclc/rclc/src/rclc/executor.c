@@ -1427,7 +1427,7 @@ _rclc_execute(rclc_executor_handle_t * handle)
           handle->subscription_callback(NULL);
         }
         break;
-
+        
       case RCLC_SUBSCRIPTION_WITH_CONTEXT:
         if (handle->data_available) {
           handle->subscription_callback_with_context(

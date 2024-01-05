@@ -27,9 +27,9 @@ extern "C"
 #include "rcutils/logging_macros.h"
 
 //BittlT: replacement for dynamic memory allocation:
-rcl_init_options_impl_t init_options_first_impl;
-rcl_init_options_impl_t init_options_sec_impl;
-int init_options_impl_counter = 0;
+rcl_init_options_impl_t init_options_first_impl_global;
+rcl_init_options_impl_t init_options_sec_impl_global;
+int init_options_impl_counterCheck = 0;
 
 rcl_init_options_t
 rcl_get_zero_initialized_init_options(void)
@@ -50,13 +50,13 @@ _rcl_init_options_zero_init(rcl_init_options_t * init_options, rcl_allocator_t a
   init_options->impl = allocator.allocate(sizeof(rcl_init_options_impl_t), allocator.state);
   */
   
-  if (init_options_impl_counter == 0){
-        init_options->impl = &init_options_first_impl;
-        init_options_impl_counter++;
+  if (init_options_impl_counterCheck == 0){
+        init_options->impl = &init_options_first_impl_global;
+        init_options_impl_counterCheck++;
         }
-    else if (init_options_impl_counter == 1){
-        init_options->impl = &init_options_sec_impl;
-        init_options_impl_counter++;
+    else if (init_options_impl_counterCheck == 1){
+        init_options->impl = &init_options_sec_impl_global;
+        init_options_impl_counterCheck++;
     }
     else return RCL_RET_ERROR;
 
@@ -92,7 +92,8 @@ rcl_init_options_init(rcl_init_options_t * init_options, rcl_allocator_t allocat
   }
   rmw_ret_t rmw_ret = rmw_init_options_init(&(init_options->impl->rmw_init_options), allocator);
   if (RMW_RET_OK != rmw_ret) {
-    allocator.deallocate(init_options->impl, allocator.state);
+    //BittlT: no dynamic allocation
+    //allocator.deallocate(init_options->impl, allocator.state);
     RCL_SET_ERROR_MSG(rmw_get_error_string().str);
     return rcl_convert_rmw_ret_to_rcl_ret(rmw_ret);
   }

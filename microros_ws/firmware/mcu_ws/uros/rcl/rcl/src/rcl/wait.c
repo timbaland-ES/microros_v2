@@ -33,8 +33,32 @@ extern "C"
 
 #include "./context_impl.h"
 
-//BittlT: replacement for dynamic memory allocation:
-rcl_wait_set_impl_t wait_set_impl;
+//BittlT: replacement of dynamic memory allocation:
+rcl_wait_set_impl_t wait_set_impl_global;
+int wait_set_impl_counterCheck = 0;
+//BittlT: next replacement of dynamic memory allocation. Value estimated for enough space during runtime
+#define memory_maxsize_estimated 100
+void *guard_conditions_global[memory_maxsize_estimated];
+int guard_conditions_counterCheck = 0;
+//BittlT: next replacement of dynamic memory allocation. Variables are used in SET_RESIZE-Makros
+// Array of size ten is used, because in dyn. memory allocation size of allocation is multiplied with value created during runtin. 10 is an estimated max value.
+rcl_subscription_t wait_set_subscription_global[10];
+int subcription_global_counterCheck =0;
+rcl_guard_condition_t wait_set_guard_condition_global[10];
+int guard_condition_global_counterCheck =0;
+rcl_timer_t wait_set_timer_global[10];
+int timer_global_counterCheck =0;
+rcl_client_t wait_set_client_global[10];
+int client_global_counterCheck =0;
+rcl_service_t wait_set_service_global[10];
+int service_global_counterCheck =0;
+rcl_event_t wait_set_event_global[10];
+int event_global_counterCheck =0;
+//BittlT: same replacement for makro SET_RESIZE_RMW_REALLOC 
+void* wait_set_impl_RMWStorage_subscription_global[100];
+void* wait_set_impl_RMWStorage_client_global[100];
+void* wait_set_impl_RMWStorage_service_global[100];
+void* wait_set_impl_RMWStorage_event_global[100];
 
 struct rcl_wait_set_impl_s
 {
@@ -141,7 +165,7 @@ rcl_wait_set_init(
   // Allocate space for the implementation struct.
   /*wait_set->impl = (rcl_wait_set_impl_t *)allocator.allocate(
     sizeof(rcl_wait_set_impl_t), allocator.state);*/
-  wait_set->impl = &wait_set_impl;
+  wait_set->impl = &wait_set_impl_global;
 
   RCL_CHECK_FOR_NULL_WITH_MSG(
     wait_set->impl, "allocating memory failed", return RCL_RET_BAD_ALLOC);
@@ -279,26 +303,37 @@ rcl_wait_set_get_allocator(const rcl_wait_set_t * wait_set, rcl_allocator_t * al
     wait_set->impl->Type ## _index = 0; \
     if (0 == Type ## s_size) { \
       if (wait_set->Type ## s) { \
-        allocator.deallocate((void *)wait_set->Type ## s, allocator.state); \
+        /*BittlT: no dynamic allocation*/ \
+        /*allocator.deallocate((void *)wait_set->Type ## s, allocator.state);*/ \
         wait_set->Type ## s = NULL; \
       } \
       ExtraDealloc \
     } else { \
-      wait_set->Type ## s = (const rcl_ ## Type ## _t **)allocator.reallocate( \
+      /*BittlT: dynamic allocation replaced by global variables:*/ \
+      /*wait_set->Type ## s = (const rcl_ ## Type ## _t **)allocator.reallocate( \
         (void *)wait_set->Type ## s, sizeof(rcl_ ## Type ## _t *) * Type ## s_size, \
-        allocator.state); \
+        allocator.state);*/ \
+      wait_set->Type ## s = (const rcl_ ## Type ## _t **)wait_set_ ## Type ## _global; \
       RCL_CHECK_FOR_NULL_WITH_MSG( \
         wait_set->Type ## s, "allocating memory failed", return RCL_RET_BAD_ALLOC); \
       memset((void *)wait_set->Type ## s, 0, sizeof(rcl_ ## Type ## _t *) * Type ## s_size); \
       wait_set->size_of_ ## Type ## s = Type ## s_size; \
       ExtraRealloc \
+      /*BittlT: Added to trace the macro calls easier*/ \
+      if (strcmp(#Type, "subscription") == 0) { subcription_global_counterCheck++; } \
+      else if (strcmp(#Type, "guard_condition") == 0) { guard_condition_global_counterCheck++; } \
+      else if (strcmp(#Type, "timer") == 0) { timer_global_counterCheck++; } \
+      else if (strcmp(#Type, "client") == 0) { client_global_counterCheck++; } \
+      else if (strcmp(#Type, "service") == 0) { service_global_counterCheck++; } \
+      else if (strcmp(#Type, "event") == 0) { event_global_counterCheck++; } \
     } \
   } while (false)
 
 #define SET_RESIZE_RMW_DEALLOC(RMWStorage, RMWCount) \
   /* Also deallocate the rmw storage. */ \
   if (wait_set->impl->RMWStorage) { \
-    allocator.deallocate((void *)wait_set->impl->RMWStorage, allocator.state); \
+    /*BittlT: no dynamic allocation*/ \
+    /*allocator.deallocate((void *)wait_set->impl->RMWStorage, allocator.state); */\
     wait_set->impl->RMWStorage = NULL; \
     wait_set->impl->RMWCount = 0; \
   }
@@ -306,10 +341,13 @@ rcl_wait_set_get_allocator(const rcl_wait_set_t * wait_set, rcl_allocator_t * al
 #define SET_RESIZE_RMW_REALLOC(Type, RMWStorage, RMWCount) \
   /* Also resize the rmw storage. */ \
   wait_set->impl->RMWCount = 0; \
-  wait_set->impl->RMWStorage = (void **)allocator.reallocate( \
-    wait_set->impl->RMWStorage, sizeof(void *) * Type ## s_size, allocator.state); \
+  /*BittlT: dynamic allocation replaced by global variables:*/ \
+  /*wait_set->impl->RMWStorage = (void **)allocator.reallocate( \
+    wait_set->impl->RMWStorage, sizeof(void *) * Type ## s_size, allocator.state);*/ \
+  wait_set->impl->RMWStorage = (void**) wait_set_impl_RMWStorage_ ## Type ## _global; \
   if (!wait_set->impl->RMWStorage) { \
-    allocator.deallocate((void *)wait_set->Type ## s, allocator.state); \
+    /*BittlT: no dynamic allocation*/ \
+    /*allocator.deallocate((void *)wait_set->Type ## s, allocator.state);*/ \
     wait_set->Type ## s = NULL; \
     wait_set->size_of_ ## Type ## s = 0; \
     RCL_SET_ERROR_MSG("allocating memory failed"); \
@@ -409,21 +447,27 @@ rcl_wait_set_resize(
   rmw_gcs->guard_condition_count = 0u;
   if (0u == num_rmw_gc) {
     if (rmw_gcs->guard_conditions) {
-      wait_set->impl->allocator.deallocate(
-        (void *)rmw_gcs->guard_conditions, wait_set->impl->allocator.state);
+      //wait_set->impl->allocator.deallocate(
+      //  (void *)rmw_gcs->guard_conditions, wait_set->impl->allocator.state);
       rmw_gcs->guard_conditions = NULL;
     }
   } else {
-    rmw_gcs->guard_conditions = (void **)wait_set->impl->allocator.reallocate(
-      rmw_gcs->guard_conditions, sizeof(void *) * num_rmw_gc, wait_set->impl->allocator.state);
+    //BittlT: changed to global variable
+    //rmw_gcs->guard_conditions = (void **)wait_set->impl->allocator.reallocate(
+    //  rmw_gcs->guard_conditions, sizeof(void *) * num_rmw_gc, wait_set->impl->allocator.state);
+    rmw_gcs->guard_conditions = guard_conditions_global;
+    guard_conditions_counterCheck++;
+
+
     if (!rmw_gcs->guard_conditions) {
       // Deallocate rcl arrays to match unallocated rmw guard conditions
-      wait_set->impl->allocator.deallocate(
-        (void *)wait_set->guard_conditions, wait_set->impl->allocator.state);
+      //BittlT: deallocation commented out because there is no allocation
+      //wait_set->impl->allocator.deallocate(
+      //  (void *)wait_set->guard_conditions, wait_set->impl->allocator.state);
       wait_set->size_of_guard_conditions = 0u;
       wait_set->guard_conditions = NULL;
-      wait_set->impl->allocator.deallocate(
-        (void *)wait_set->timers, wait_set->impl->allocator.state);
+      //wait_set->impl->allocator.deallocate(
+      //  (void *)wait_set->timers, wait_set->impl->allocator.state);
       wait_set->size_of_timers = 0u;
       wait_set->timers = NULL;
       RCL_SET_ERROR_MSG("allocating memory failed");

@@ -64,6 +64,10 @@ extern "C"
 #include "./context_impl.h"
 #include "./node_impl.h"
 
+//BittlT: dynamic allocation replacement
+rcl_node_impl_t node_impl_global; 
+rcl_guard_condition_t graph_guard_condition_global;
+
 const char * const RCL_DISABLE_LOANED_MESSAGES_ENV_VAR = "ROS_DISABLE_LOANED_MESSAGES";
 
 /// Return the logger name associated with a node given the validated node name and namespace.
@@ -100,7 +104,8 @@ const char * rcl_create_node_logger_name(
   // Join the namespace and node name to create the logger name.
   char * node_logger_name = rcutils_format_string(
     *allocator, "%s%s%s", ns_with_separators, RCUTILS_LOGGING_SEPARATOR_STRING, node_name);
-  allocator->deallocate((char *)ns_with_separators, allocator->state);
+  //BittlT: no memory allocation
+  //allocator->deallocate((char *)ns_with_separators, allocator->state);
   return node_logger_name;
 }
 
@@ -200,7 +205,10 @@ rcl_node_init(
   }
 
   // Allocate space for the implementation struct.
-  node->impl = (rcl_node_impl_t *)allocator->allocate(sizeof(rcl_node_impl_t), allocator->state);
+  //BittlT: dynamic memory allocation replaced by global variabl
+  //node->impl = (rcl_node_impl_t *)allocator->allocate(sizeof(rcl_node_impl_t), allocator->state);
+  node->impl = &node_impl_global;
+
   RCL_CHECK_FOR_NULL_WITH_MSG(
     node->impl, "allocating memory failed", ret = RCL_RET_BAD_ALLOC; goto cleanup);
   node->impl->rmw_node_handle = NULL;
@@ -241,7 +249,8 @@ rcl_node_init(
     goto fail;
   } else if (NULL != remapped_namespace) {
     if (should_free_local_namespace_) {
-      allocator->deallocate((char *)local_namespace_, allocator->state);
+      //BittlT: no memory allocation
+      //allocator->deallocate((char *)local_namespace_, allocator->state);
     }
     should_free_local_namespace_ = true;
     local_namespace_ = remapped_namespace;
@@ -276,8 +285,11 @@ rcl_node_init(
   RCL_CHECK_FOR_NULL_WITH_MSG(
     rmw_graph_guard_condition, rmw_get_error_string().str, goto fail);
 
-  node->impl->graph_guard_condition = (rcl_guard_condition_t *)allocator->allocate(
-    sizeof(rcl_guard_condition_t), allocator->state);
+  //BittlT: dynamic allocation replacement
+  //node->impl->graph_guard_condition = (rcl_guard_condition_t *)allocator->allocate(
+  //  sizeof(rcl_guard_condition_t), allocator->state);
+  node->impl->graph_guard_condition = &graph_guard_condition_global;
+
   RCL_CHECK_FOR_NULL_WITH_MSG(
     node->impl->graph_guard_condition,
     "allocating memory failed",
@@ -324,11 +336,13 @@ fail:
       RCUTILS_LOG_ERROR_EXPRESSION_NAMED(
         (ret != RCL_RET_OK && ret != RCL_RET_NOT_INIT),
         ROS_PACKAGE_NAME, "Failed to fini publisher for node: %i", ret);
-      allocator->deallocate((char *)node->impl->logger_name, allocator->state);
+      //BittlT: no memory allocation
+      //allocator->deallocate((char *)node->impl->logger_name, allocator->state);
     }
 #endif // RCL_MICROROS_COMPLETE_IMPL
     if (node->impl->fq_name) {
-      allocator->deallocate((char *)node->impl->fq_name, allocator->state);
+      //BittlT: no memory allocation
+      //allocator->deallocate((char *)node->impl->fq_name, allocator->state);
     }
     if (node->impl->rmw_node_handle) {
       ret = rmw_destroy_node(node->impl->rmw_node_handle);
@@ -347,7 +361,8 @@ fail:
           "failed to fini guard condition in error recovery: %s", rcl_get_error_string().str
         );
       }
-      allocator->deallocate(node->impl->graph_guard_condition, allocator->state);
+      //BittlT: no memory allocation
+      //allocator->deallocate(node->impl->graph_guard_condition, allocator->state);
     }
 
 #ifdef RCL_MICROROS_COMPLETE_IMPL
@@ -361,7 +376,8 @@ fail:
       }
     }
 #endif // RCL_MICROROS_COMPLETE_IMPL
-    allocator->deallocate(node->impl, allocator->state);
+    //BittlT: no memory allocation
+    //allocator->deallocate(node->impl, allocator->state);
   }
   *node = rcl_get_zero_initialized_node();
 
@@ -369,11 +385,13 @@ fail:
   // fall through from fail -> cleanup
 cleanup:
   if (should_free_local_namespace_) {
-    allocator->deallocate((char *)local_namespace_, allocator->state);
+    //BittlT: no memory allocation
+    //allocator->deallocate((char *)local_namespace_, allocator->state);
     local_namespace_ = NULL;
   }
   if (NULL != remapped_node_name) {
-    allocator->deallocate(remapped_node_name, allocator->state);
+    //BittlT: no memory allocation
+    //allocator->deallocate(remapped_node_name, allocator->state);
   }
   return ret;
 }
@@ -409,10 +427,11 @@ rcl_node_fini(rcl_node_t * node)
     RCL_SET_ERROR_MSG(rmw_get_error_string().str);
     result = RCL_RET_ERROR;
   }
-  allocator.deallocate(node->impl->graph_guard_condition, allocator.state);
+  //BittlT: no memory allocation
+  //allocator.deallocate(node->impl->graph_guard_condition, allocator.state);
   // assuming that allocate and deallocate are ok since they are checked in init
-  allocator.deallocate((char *)node->impl->logger_name, allocator.state);
-  allocator.deallocate((char *)node->impl->fq_name, allocator.state);
+  //allocator.deallocate((char *)node->impl->logger_name, allocator.state);
+  //allocator.deallocate((char *)node->impl->fq_name, allocator.state);
 #ifdef RCL_MICROROS_COMPLETE_IMPL
   if (NULL != node->impl->options.arguments.impl) {
     rcl_ret_t ret = rcl_arguments_fini(&(node->impl->options.arguments));
@@ -421,7 +440,8 @@ rcl_node_fini(rcl_node_t * node)
     }
   }
 #endif // RCL_MICROROS_COMPLETE_IMPL
-  allocator.deallocate(node->impl, allocator.state);
+  //BittlT: no memory allocation
+  //allocator.deallocate(node->impl, allocator.state);
   node->impl = NULL;
   RCUTILS_LOG_DEBUG_NAMED(ROS_PACKAGE_NAME, "Node finalized");
   return result;
@@ -660,7 +680,8 @@ rcl_ret_t rcl_node_type_description_service_init(rcl_node_t * node)
   ret = rcl_service_init(
     &node->impl->get_type_description_service, node,
     type_support, service_name, &service_ops);
-  allocator.deallocate(service_name, allocator.state);
+  //BittlT: no memory allocation
+  //allocator.deallocate(service_name, allocator.state);
 
   return ret;
 #else

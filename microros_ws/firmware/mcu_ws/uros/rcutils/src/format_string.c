@@ -28,6 +28,12 @@ extern "C"
 
 #include "rcutils/snprintf.h"
 
+//BittlT: dynamic allocation replaced
+char output_string_first_global[100];
+char output_string_sec_global[100];
+char output_string_third_global[100];
+int output_string_global_counterCheck = 0;
+
 char *
 rcutils_format_string_limit(
   rcutils_allocator_t allocator,
@@ -55,7 +61,25 @@ rcutils_format_string_limit(
   if (bytes_to_be_written + 1 > limit) {
     bytes_to_be_written = limit - 1;
   }
-  char * output_string = allocator.allocate(bytes_to_be_written + 1, allocator.state);
+
+  //BittlT: dynamic allocation replaced
+  //char * output_string = allocator.allocate(bytes_to_be_written + 1, allocator.state);
+
+  char * output_string = NULL;
+  if (output_string_global_counterCheck == 0){
+        output_string = output_string_first_global;
+        output_string_global_counterCheck++;
+        }
+    else if (output_string_global_counterCheck == 1){
+        output_string = output_string_sec_global;
+        output_string_global_counterCheck++;
+        }
+    else if (output_string_global_counterCheck == 2){
+        output_string = output_string_third_global;
+        output_string_global_counterCheck++;
+        }
+    else return 0; //== FALSE
+
   if (NULL == output_string) {
     va_end(args2);
     return NULL;
@@ -63,7 +87,8 @@ rcutils_format_string_limit(
   // format the string
   int ret = rcutils_vsnprintf(output_string, bytes_to_be_written + 1, format_string, args2);
   if (0 > ret) {
-    allocator.deallocate(output_string, allocator.state);
+    //BittlT: no dynamic allocation
+    //allocator.deallocate(output_string, allocator.state);
     va_end(args2);
     return NULL;
   }

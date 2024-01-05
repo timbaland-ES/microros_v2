@@ -103,10 +103,11 @@ rcutils_get_default_allocator()
   return default_allocator;
 }
 
+//BittlT: check deactivated because there is no allocation. 
 bool
 rcutils_allocator_is_valid(const rcutils_allocator_t * allocator)
 {
-  if (
+  /*if (
     NULL == allocator ||
     NULL == allocator->allocate ||
     NULL == allocator->deallocate ||
@@ -114,7 +115,7 @@ rcutils_allocator_is_valid(const rcutils_allocator_t * allocator)
     NULL == allocator->reallocate)
   {
     return false;
-  }
+  }*/
   return true;
 }
 

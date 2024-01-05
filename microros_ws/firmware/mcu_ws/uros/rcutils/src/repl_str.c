@@ -42,6 +42,12 @@ extern "C"
 
 // *INDENT-OFF* (prevent uncrustify from messing with the original style)
 
+//BittlT: dynamic allocation replaced
+uintptr_t pos_cache_tmp_global[50];
+int pos_cache_tmp_counterCheck = 0;
+char * ret_global[100];
+int ret_counterCheck = 0;
+
 char *
 rcutils_repl_str(
   const char * str,
@@ -77,8 +83,13 @@ rcutils_repl_str(
     /* Increase the cache size when necessary. */
     if (cache_sz < count) {
       cache_sz += cache_sz_inc;
-      pos_cache_tmp =
-        allocator->reallocate(pos_cache, sizeof(*pos_cache) * cache_sz, allocator->state);
+      
+      //BittlT: dynamic allocation replaced
+      //pos_cache_tmp =
+      //  allocator->reallocate(pos_cache, sizeof(*pos_cache) * cache_sz, allocator->state);
+      pos_cache_tmp = pos_cache_tmp_global;
+      pos_cache_tmp_counterCheck++;
+
       if (pos_cache_tmp == NULL) {
         goto end_repl_str;
       } else {
@@ -103,7 +114,12 @@ rcutils_repl_str(
   } else {
     retlen = orglen;
   }
-  ret = allocator->allocate(retlen + 1, allocator->state);
+  
+  //BittlT: dynamic allocation replaced
+  //ret = allocator->allocate(retlen + 1, allocator->state);
+  ret = ret_global;
+  ret_counterCheck++;
+
   if (ret == NULL) {
     goto end_repl_str;
   }

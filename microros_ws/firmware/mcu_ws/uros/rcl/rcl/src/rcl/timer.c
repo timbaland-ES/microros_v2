@@ -27,6 +27,9 @@ extern "C"
 #include "rcutils/time.h"
 #include "tracetools/tracetools.h"
 
+rcl_timer_impl_t timer_impl_global;
+int timer_impl_counterCheck=0;
+
 struct rcl_timer_impl_s
 {
   // The clock providing time.
@@ -190,7 +193,11 @@ rcl_timer_init(
   impl.callback_data.user_data = NULL;
   impl.callback_data.reset_counter = 0;
 
-  timer->impl = (rcl_timer_impl_t *)allocator.allocate(sizeof(rcl_timer_impl_t), allocator.state);
+  //BittlT: dynamic allocation replaced
+  //timer->impl = (rcl_timer_impl_t *)allocator.allocate(sizeof(rcl_timer_impl_t), allocator.state);
+  timer->impl= &timer_impl_global;
+  timer_impl_counterCheck++;
+
   if (NULL == timer->impl) {
     if (RCL_RET_OK != rcl_guard_condition_fini(&(impl.guard_condition))) {
       // Should be impossible

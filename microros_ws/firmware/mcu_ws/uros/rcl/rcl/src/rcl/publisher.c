@@ -38,6 +38,10 @@ extern "C"
 #include "./common.h"
 #include "./publisher_impl.h"
 
+//BittlT: dynamic alllocation with calloc replaced AND intitialized
+rcl_publisher_impl_t publisher_impl_global = {0};
+int publisher_impl_counterCheck = 0;
+
 rcl_publisher_t
 rcl_get_zero_initialized_publisher()
 {
@@ -101,11 +105,14 @@ rcl_publisher_init(
   RCUTILS_LOG_DEBUG_NAMED(
     ROS_PACKAGE_NAME, "Expanded and remapped topic name '%s'", remapped_topic_name);
 
+  //BittlT: dynamic allocation replaced. Special case: due to Calloc, the global variable got initialized with 0 / NULL
   // Allocate space for the implementation struct.
-  publisher->impl = (rcl_publisher_impl_t *)allocator->zero_allocate(
+  /*publisher->impl = (rcl_publisher_impl_t *)allocator->zero_allocate(
     1, sizeof(rcl_publisher_impl_t), allocator->state);
   RCL_CHECK_FOR_NULL_WITH_MSG(
-    publisher->impl, "allocating memory failed", ret = RCL_RET_BAD_ALLOC; goto cleanup);
+    publisher->impl, "allocating memory failed", ret = RCL_RET_BAD_ALLOC; goto cleanup);*/
+  publisher->impl = &publisher_impl_global;
+  publisher_impl_counterCheck++;
 
   // Fill out implementation struct.
   // rmw handle (create rmw publisher)
@@ -166,14 +173,16 @@ fail:
       }
     }
 
-    allocator->deallocate(publisher->impl, allocator->state);
+    //BittlT: no dynamic allocation
+    //allocator->deallocate(publisher->impl, allocator->state);
     publisher->impl = NULL;
   }
 
   ret = fail_ret;
   // Fall through to cleanup
 cleanup:
-  allocator->deallocate(remapped_topic_name, allocator->state);
+  //BittlT: no dynamic allocation
+  //allocator->deallocate(remapped_topic_name, allocator->state);
   return ret;
 }
 
@@ -213,7 +222,8 @@ rcl_publisher_fini(rcl_publisher_t * publisher, rcl_node_t * node)
       result = RCL_RET_ERROR;
     }
 #endif // RCL_MICROROS_COMPLETE_IMPL
-    allocator.deallocate(publisher->impl, allocator.state);
+    //BittlT: no dynamic allocation
+    //allocator.deallocate(publisher->impl, allocator.state);
     publisher->impl = NULL;
   }
   RCUTILS_LOG_DEBUG_NAMED(ROS_PACKAGE_NAME, "Publisher finalized");

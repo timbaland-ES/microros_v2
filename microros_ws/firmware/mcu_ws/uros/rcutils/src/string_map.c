@@ -35,6 +35,10 @@ typedef struct key_value_pair
   char * value;
 } key_value_pair_t;
 
+//BittlT: dynamic allocation replaced
+key_value_pair_t new_key_value_pairs_global[10];
+int key_value_pairs_counterCheck;
+
 typedef struct rcutils_string_map_impl_s
 {
   key_value_pair_t * key_value_pairs;
@@ -42,6 +46,10 @@ typedef struct rcutils_string_map_impl_s
   size_t size;
   rcutils_allocator_t allocator;
 } rcutils_string_map_impl_t;
+
+//BittlT: dynamic allocation replaced
+rcutils_string_map_impl_t string_map_impl_global;
+int string_map_impl_counterCheck = 0;
 
 rcutils_string_map_t
 rcutils_get_zero_initialized_string_map(void)
@@ -62,9 +70,14 @@ rcutils_string_map_init(
     RCUTILS_SET_ERROR_MSG("string_map already initialized");
     return RCUTILS_RET_STRING_MAP_ALREADY_INIT;
   }
-  RCUTILS_CHECK_ALLOCATOR_WITH_MSG(
+  
+  //BittlT: dynamic allocation replaced
+  /*RCUTILS_CHECK_ALLOCATOR_WITH_MSG(
     &allocator, "invalid allocator", return RCUTILS_RET_INVALID_ARGUMENT)
-  string_map->impl = allocator.allocate(sizeof(rcutils_string_map_impl_t), allocator.state);
+  string_map->impl = allocator.allocate(sizeof(rcutils_string_map_impl_t), allocator.state);*/
+  string_map->impl = &string_map_impl_global;
+  string_map_impl_counterCheck++;
+  
   if (NULL == string_map->impl) {
     RCUTILS_SET_ERROR_MSG("failed to allocate memory for string map impl struct");
     return RCUTILS_RET_BAD_ALLOC;
@@ -76,7 +89,8 @@ rcutils_string_map_init(
   rcutils_ret_t ret = rcutils_string_map_reserve(string_map, initial_capacity);
   if (ret != RCUTILS_RET_OK) {
     // error mesage is already set, clean up and return the ret
-    allocator.deallocate(string_map->impl, allocator.state);
+    //BittlT: no dynamic allocation
+    //allocator.deallocate(string_map->impl, allocator.state);
     string_map->impl = NULL;
     return ret;
   }
@@ -102,7 +116,8 @@ rcutils_string_map_fini(rcutils_string_map_t * string_map)
   }
   rcutils_allocator_t allocator = string_map->impl->allocator;
 
-  allocator.deallocate(string_map->impl, allocator.state);
+  //BittlT: no dynamic allocation
+  //allocator.deallocate(string_map->impl, allocator.state);
   string_map->impl = NULL;
 
   return RCUTILS_RET_OK;
@@ -138,9 +153,11 @@ static void
 __remove_key_and_value_at_index(rcutils_string_map_impl_t * string_map_impl, size_t index)
 {
   rcutils_allocator_t allocator = string_map_impl->allocator;
-  allocator.deallocate(string_map_impl->key_value_pairs[index].key, allocator.state);
+  //BittlT: no dynamic allocation
+  //allocator.deallocate(string_map_impl->key_value_pairs[index].key, allocator.state);
   string_map_impl->key_value_pairs[index].key = NULL;
-  allocator.deallocate(string_map_impl->key_value_pairs[index].value, allocator.state);
+  //BittlT: no dynamic allocation
+  //allocator.deallocate(string_map_impl->key_value_pairs[index].value, allocator.state);
   string_map_impl->key_value_pairs[index].value = NULL;
   string_map_impl->size--;
 }
@@ -163,7 +180,9 @@ rcutils_string_map_reserve(rcutils_string_map_t * string_map, size_t capacity)
   } else if (capacity == 0) {
     // if the requested capacity is zero, then make sure the existing keys and values are free'd
     // size is known to be 0 here because of the recursive call above.
-    allocator.deallocate(string_map->impl->key_value_pairs, allocator.state);
+    
+    //BittlT: no dynamic allocation
+    //allocator.deallocate(string_map->impl->key_value_pairs, allocator.state);
     string_map->impl->key_value_pairs = NULL;
     // falls through to normal function end
   } else {
@@ -178,8 +197,12 @@ rcutils_string_map_reserve(rcutils_string_map_t * string_map, size_t capacity)
     }
 
     // resize the keys and values, assigning the result only if it succeeds
-    key_value_pair_t * new_key_value_pairs = allocator.reallocate(
-      string_map->impl->key_value_pairs, capacity * sizeof(key_value_pair_t), allocator.state);
+    //BittlT: dynamic allocation replaced
+    //key_value_pair_t * new_key_value_pairs = allocator.reallocate(
+      //string_map->impl->key_value_pairs, capacity * sizeof(key_value_pair_t), allocator.state);
+    key_value_pair_t * new_key_value_pairs = new_key_value_pairs_global;
+    key_value_pairs_counterCheck++;
+    
     if (NULL == new_key_value_pairs) {
       RCUTILS_SET_ERROR_MSG("failed to allocate memory for string_map key-value pairs");
       return RCUTILS_RET_BAD_ALLOC;
@@ -304,7 +327,8 @@ rcutils_string_map_set_no_resize(
   if (NULL == new_value) {
     RCUTILS_SET_ERROR_MSG("failed to allocate memory for value");
     if (should_free_key_on_error) {
-      allocator.deallocate(string_map->impl->key_value_pairs[key_index].key, allocator.state);
+      //BittlT: no dynamic allocation
+      //allocator.deallocate(string_map->impl->key_value_pairs[key_index].key, allocator.state);
       string_map->impl->key_value_pairs[key_index].key = NULL;
     }
     return RCUTILS_RET_BAD_ALLOC;
@@ -312,7 +336,8 @@ rcutils_string_map_set_no_resize(
   string_map->impl->key_value_pairs[key_index].value = new_value;
   if (original_value != NULL) {
     // clean up the old value if not NULL
-    allocator.deallocate(original_value, allocator.state);
+    //BittlT: no dynamic allocation
+    //allocator.deallocate(original_value, allocator.state);
   }
   if (!key_exists) {
     // if the key didn't exist, then we had to add it, so increase the size

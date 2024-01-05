@@ -26,6 +26,10 @@ extern "C"
 
 #include "./context_impl.h"
 
+//BittlT: dynamic allocation replaced:
+rcl_guard_condition_impl_t guard_condition_impl_global;
+int guard_condition_impl_counterCheck = 0;
+
 struct rcl_guard_condition_impl_s
 {
   rmw_guard_condition_t * rmw_handle;
@@ -69,9 +73,14 @@ __rcl_guard_condition_init_from_rmw_impl(
       "either rcl_init() was not called or rcl_shutdown() was called.");
     return RCL_RET_NOT_INIT;
   }
+
+  //BittlT: dynamic allocation replaced
   // Allocate space for the guard condition impl.
-  guard_condition->impl = (rcl_guard_condition_impl_t *)allocator->allocate(
-    sizeof(rcl_guard_condition_impl_t), allocator->state);
+  /*guard_condition->impl = (rcl_guard_condition_impl_t *)allocator->allocate(
+    sizeof(rcl_guard_condition_impl_t), allocator->state);*/
+  guard_condition->impl = &guard_condition_impl_global;
+  guard_condition_impl_counterCheck++;
+
   if (!guard_condition->impl) {
     RCL_SET_ERROR_MSG("allocating memory failed");
     return RCL_RET_BAD_ALLOC;
@@ -85,8 +94,9 @@ __rcl_guard_condition_init_from_rmw_impl(
     // Otherwise create one.
     guard_condition->impl->rmw_handle = rmw_create_guard_condition(&(context->impl->rmw_context));
     if (!guard_condition->impl->rmw_handle) {
+      //BittlT: no memory allocation
       // Deallocate impl and exit.
-      allocator->deallocate(guard_condition->impl, allocator->state);
+      //allocator->deallocate(guard_condition->impl, allocator->state);
       guard_condition->impl = NULL;
       RCL_SET_ERROR_MSG(rmw_get_error_string().str);
       return RCL_RET_ERROR;
@@ -134,7 +144,8 @@ rcl_guard_condition_fini(rcl_guard_condition_t * guard_condition)
         result = RCL_RET_ERROR;
       }
     }
-    allocator.deallocate(guard_condition->impl, allocator.state);
+    //BittlT: no memory allocation
+    //allocator.deallocate(guard_condition->impl, allocator.state);
     guard_condition->impl = NULL;
   }
   return result;

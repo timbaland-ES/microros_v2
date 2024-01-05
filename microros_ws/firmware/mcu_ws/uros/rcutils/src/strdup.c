@@ -26,6 +26,11 @@ extern "C"
 #include "./common.h"
 #include "rcutils/macros.h"
 
+//BittlT: dynamic allocation replaced
+char new_string_first_global[100];
+char new_string_sec_global[100];
+char new_string_third_global[100];
+int new_string_counterCheck = 0;
 
 char *
 rcutils_strdup(const char * str, rcutils_allocator_t allocator)
@@ -45,7 +50,25 @@ rcutils_strndup(const char * str, size_t max_length, rcutils_allocator_t allocat
   }
   char * p = memchr(str, '\0', max_length);
   size_t string_length = p == NULL ? max_length : (size_t)(p - str);
-  char * new_string = allocator.allocate(string_length + 1, allocator.state);
+  
+  //BittlT: dynamic allocation replaced
+  //char * new_string = allocator.allocate(string_length + 1, allocator.state);
+
+  char * new_string = NULL;
+    if (new_string_counterCheck == 0){
+        new_string = new_string_first_global;
+        new_string_counterCheck++;
+        }
+    else if (new_string_counterCheck == 1){
+        new_string = new_string_sec_global;
+        new_string_counterCheck++;
+        }
+    else if (new_string_counterCheck == 2){
+        new_string = new_string_third_global;
+        new_string_counterCheck++;
+        }
+    else return 0; //== FALSE
+  
   if (NULL == new_string) {
     return NULL;
   }

@@ -165,8 +165,9 @@ rcl_expand_topic_name(
           } else {
             RCUTILS_SAFE_FWRITE_TO_STDERR("failed to allocate memory for unmatched substitution\n");
           }
-          allocator.deallocate(unmatched_substitution, allocator.state);
-          allocator.deallocate(local_output, allocator.state);
+          //BittlT: no dynamic allocation
+          //allocator.deallocate(unmatched_substitution, allocator.state);
+          //allocator.deallocate(local_output, allocator.state);
           return RCL_RET_UNKNOWN_SUBSTITUTION;
         }
       }
@@ -177,13 +178,15 @@ rcl_expand_topic_name(
       if (!next_substitution) {
         *output_topic_name = NULL;
         RCL_SET_ERROR_MSG("failed to allocate memory for substitution");
-        allocator.deallocate(local_output, allocator.state);
+        //BittlT: no dynamic allocation 
+        //allocator.deallocate(local_output, allocator.state);
         return RCL_RET_BAD_ALLOC;
       }
       char * original_local_output = local_output;
       local_output = rcutils_repl_str(current_output, next_substitution, replacement, &allocator);
-      allocator.deallocate(next_substitution, allocator.state);  // free no matter what
-      allocator.deallocate(original_local_output, allocator.state);  // free no matter what
+      //BittlT: no dynamic allocation
+      //allocator.deallocate(next_substitution, allocator.state);  // free no matter what
+      //allocator.deallocate(original_local_output, allocator.state);  // free no matter what
       if (!local_output) {
         *output_topic_name = NULL;
         RCL_SET_ERROR_MSG("failed to allocate memory for expanded topic");
@@ -205,7 +208,8 @@ rcl_expand_topic_name(
     local_output = rcutils_format_string(
       allocator, fmt, node_namespace, (local_output) ? local_output : input_topic_name);
     if (original_local_output) {
-      allocator.deallocate(original_local_output, allocator.state);
+      //BittlT: no dynamic allocation
+      //allocator.deallocate(original_local_output, allocator.state);
     }
     if (!local_output) {
       *output_topic_name = NULL;

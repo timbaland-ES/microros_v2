@@ -124,8 +124,9 @@ cleanup:
         error.str);
     }
   }
-  allocator.deallocate(expanded_topic_name, allocator.state);
-  allocator.deallocate(remapped_topic_name, allocator.state);
+  //BittlT: no dynamic allocation
+  //allocator.deallocate(expanded_topic_name, allocator.state);
+  //allocator.deallocate(remapped_topic_name, allocator.state);
   if (is_service && RCL_RET_TOPIC_NAME_INVALID == ret) {
     ret = RCL_RET_SERVICE_NAME_INVALID;
   }
