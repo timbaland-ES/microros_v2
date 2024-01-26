@@ -27,7 +27,11 @@ extern "C"
 #include "./context_impl.h"
 
 //BittlT: dynamic allocation replaced:
-rcl_guard_condition_impl_t guard_condition_impl_global;
+rcl_guard_condition_impl_t guard_condition_impl_first_global;
+rcl_guard_condition_impl_t guard_condition_impl_sec_global;
+rcl_guard_condition_impl_t guard_condition_impl_third_global;
+rcl_guard_condition_impl_t guard_condition_impl_fourth_global;
+rcl_guard_condition_impl_t guard_condition_impl_fivth_global;
 int guard_condition_impl_counterCheck = 0;
 
 struct rcl_guard_condition_impl_s
@@ -78,8 +82,27 @@ __rcl_guard_condition_init_from_rmw_impl(
   // Allocate space for the guard condition impl.
   /*guard_condition->impl = (rcl_guard_condition_impl_t *)allocator->allocate(
     sizeof(rcl_guard_condition_impl_t), allocator->state);*/
-  guard_condition->impl = &guard_condition_impl_global;
-  guard_condition_impl_counterCheck++;
+    if (guard_condition_impl_counterCheck == 0){
+        guard_condition->impl = &guard_condition_impl_first_global;
+        guard_condition_impl_counterCheck++;
+        }
+    else if (guard_condition_impl_counterCheck == 1){
+        guard_condition->impl = &guard_condition_impl_sec_global;
+        guard_condition_impl_counterCheck++;
+        }
+    else if (guard_condition_impl_counterCheck == 2){
+        guard_condition->impl = &guard_condition_impl_third_global;
+        guard_condition_impl_counterCheck++;
+        }
+    else if (guard_condition_impl_counterCheck == 3){
+        guard_condition->impl = &guard_condition_impl_fourth_global;
+        guard_condition_impl_counterCheck++;
+        }
+    else if (guard_condition_impl_counterCheck == 4){
+        guard_condition->impl = &guard_condition_impl_fivth_global;
+        guard_condition_impl_counterCheck++;
+        }
+    else return 0; //== FALSE
 
   if (!guard_condition->impl) {
     RCL_SET_ERROR_MSG("allocating memory failed");

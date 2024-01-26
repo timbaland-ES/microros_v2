@@ -40,10 +40,15 @@ int wait_set_impl_counterCheck = 0;
 #define memory_maxsize_estimated 100
 void *guard_conditions_global[memory_maxsize_estimated];
 int guard_conditions_counterCheck = 0;
+
 //BittlT: next replacement of dynamic memory allocation. Variables are used in SET_RESIZE-Makros
 // Array of size ten is used, because in dyn. memory allocation size of allocation is multiplied with value created during runtin. 10 is an estimated max value.
 rcl_subscription_t wait_set_subscription_global[10];
+//BittlT: Test
+//rcl_subscription_t wait_set_subscription_global_test;
+//rcl_subscription_t * wait_set_subscription_global = &wait_set_subscription_global_test
 int subcription_global_counterCheck =0;
+
 rcl_guard_condition_t wait_set_guard_condition_global[10];
 int guard_condition_global_counterCheck =0;
 rcl_timer_t wait_set_timer_global[10];

@@ -48,7 +48,11 @@ typedef struct rcutils_string_map_impl_s
 } rcutils_string_map_impl_t;
 
 //BittlT: dynamic allocation replaced
-rcutils_string_map_impl_t string_map_impl_global;
+rcutils_string_map_impl_t string_map_impl_first_global;
+rcutils_string_map_impl_t string_map_impl_sec_global;
+rcutils_string_map_impl_t string_map_impl_third_global;
+rcutils_string_map_impl_t string_map_impl_fourth_global;
+rcutils_string_map_impl_t string_map_impl_fivth_global;
 int string_map_impl_counterCheck = 0;
 
 rcutils_string_map_t
@@ -75,9 +79,28 @@ rcutils_string_map_init(
   /*RCUTILS_CHECK_ALLOCATOR_WITH_MSG(
     &allocator, "invalid allocator", return RCUTILS_RET_INVALID_ARGUMENT)
   string_map->impl = allocator.allocate(sizeof(rcutils_string_map_impl_t), allocator.state);*/
-  string_map->impl = &string_map_impl_global;
-  string_map_impl_counterCheck++;
-  
+  if (string_map_impl_counterCheck == 0){
+        string_map->impl = &string_map_impl_first_global;
+        string_map_impl_counterCheck++;
+        }
+    else if (string_map_impl_counterCheck == 1){
+        string_map->impl = &string_map_impl_sec_global;
+        string_map_impl_counterCheck++;
+        }
+    else if (string_map_impl_counterCheck == 2){
+        string_map->impl = &string_map_impl_third_global;
+        string_map_impl_counterCheck++;
+        }
+    else if (string_map_impl_counterCheck == 3){
+        string_map->impl = &string_map_impl_fourth_global;
+        string_map_impl_counterCheck++;
+        }
+    else if (string_map_impl_counterCheck == 4){
+        string_map->impl = &string_map_impl_fivth_global;
+        string_map_impl_counterCheck++;
+        }
+    else return 0; //== FALSE
+
   if (NULL == string_map->impl) {
     RCUTILS_SET_ERROR_MSG("failed to allocate memory for string map impl struct");
     return RCUTILS_RET_BAD_ALLOC;

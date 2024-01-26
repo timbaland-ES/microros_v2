@@ -41,6 +41,10 @@ extern "C"
 #include "./subscription_impl.h"
 
 
+//dynamic allocation with calloc replaced AND initialized
+rcl_subscription_impl_t subscription_impl_global = {0}; 
+int subscription_impl_counterCheck = 0; 
+
 rcl_subscription_t
 rcl_get_zero_initialized_subscription()
 {
@@ -96,14 +100,19 @@ rcl_subscription_init(
   RCUTILS_LOG_DEBUG_NAMED(
     ROS_PACKAGE_NAME, "Expanded and remapped topic name '%s'", remapped_topic_name);
 
+  //BittlT: dynamic allocation replaced. Special case calloc. Global variable initialized. 
   // Allocate memory for the implementation struct.
-  subscription->impl = (rcl_subscription_impl_t *)allocator->zero_allocate(
-    1, sizeof(rcl_subscription_impl_t), allocator->state);
-  RCL_CHECK_FOR_NULL_WITH_MSG(
-    subscription->impl, "allocating memory failed", ret = RCL_RET_BAD_ALLOC; goto cleanup);
+  //subscription->impl = (rcl_subscription_impl_t *)allocator->zero_allocate(
+  //  1, sizeof(rcl_subscription_impl_t), allocator->state);
+  //RCL_CHECK_FOR_NULL_WITH_MSG(
+    //subscription->impl, "allocating memory failed", ret = RCL_RET_BAD_ALLOC; goto cleanup);
   // Fill out the implemenation struct.
   // rmw_handle
   // TODO(wjwwood): pass allocator once supported in rmw api.
+  subscription->impl = &subscription_impl_global;
+  subscription_impl_counterCheck++;
+
+
   subscription->impl->rmw_handle = rmw_create_subscription(
     rcl_node_get_rmw_handle(node),
     type_support,
@@ -166,14 +175,15 @@ fail:
       RCUTILS_SAFE_FWRITE_TO_STDERR(rmw_get_error_string().str);
       RCUTILS_SAFE_FWRITE_TO_STDERR("\n");
     }
-
-    allocator->deallocate(subscription->impl, allocator->state);
+    //BittlT: no dynamic allocation
+    //allocator->deallocate(subscription->impl, allocator->state);
     subscription->impl = NULL;
   }
   ret = fail_ret;
   // Fall through to cleanup
 cleanup:
-  allocator->deallocate(remapped_topic_name, allocator->state);
+  //BittlT: no dynamic allocation
+  //allocator->deallocate(remapped_topic_name, allocator->state);
   return ret;
 }
 
@@ -219,7 +229,8 @@ rcl_subscription_fini(rcl_subscription_t * subscription, rcl_node_t * node)
       result = RCL_RET_ERROR;
     }
 #endif // RCL_MICROROS_COMPLETE_IMPL
-    allocator.deallocate(subscription->impl, allocator.state);
+    //BittlT: no dynamic allocation
+    //allocator.deallocate(subscription->impl, allocator.state);
     subscription->impl = NULL;
   }
   RCUTILS_LOG_DEBUG_NAMED(ROS_PACKAGE_NAME, "Subscription finalized");
@@ -272,8 +283,9 @@ rcl_subscription_options_fini(rcl_subscription_options_t * option)
       RCUTILS_SAFE_FWRITE_TO_STDERR("Failed to fini content filter options.\n");
       return rcl_convert_rmw_ret_to_rcl_ret(ret);
     }
-    allocator->deallocate(
-      option->rmw_subscription_options.content_filter_options, allocator->state);
+    //BittlT: no dynamic allocation
+    //allocator->deallocate(
+      //option->rmw_subscription_options.content_filter_options, allocator->state);
     option->rmw_subscription_options.content_filter_options = NULL;
   }
   return RCL_RET_OK;
@@ -314,6 +326,7 @@ rcl_subscription_options_set_content_filter_options(
     }
   } else {
     options->rmw_subscription_options.content_filter_options =
+      //BittlT: evtl hier noch ändern
       allocator->allocate(
       sizeof(rmw_subscription_content_filter_options_t), allocator->state);
     if (!options->rmw_subscription_options.content_filter_options) {
@@ -360,8 +373,9 @@ failed:
         return rcl_convert_rmw_ret_to_rcl_ret(rmw_ret);
       }
 
-      allocator->deallocate(
-        options->rmw_subscription_options.content_filter_options, allocator->state);
+      //BittlT: no dynamic allocation
+      //allocator->deallocate(
+      //  options->rmw_subscription_options.content_filter_options, allocator->state);
       options->rmw_subscription_options.content_filter_options = NULL;
     }
   } else {

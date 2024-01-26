@@ -34,7 +34,8 @@
 #define DEFAULT_WAIT_TIMEOUT_NS 1000000000
 
 //BittlT: replacement for dynamic memory allocation:
-rclc_executor_handle_t executor_handle;
+rclc_executor_handle_t executor_handle_global[5];
+int executor_handle_counterCheck = 0;
 
 // declarations of helper functions
 /*
@@ -130,7 +131,8 @@ rclc_executor_init(
     (number_of_handles * sizeof(rclc_executor_handle_t)),
     executor->allocator->state);
   */
- executor->handles = &executor_handle;
+ executor->handles = executor_handle_global;
+ executor_handle_counterCheck++;
 
 
   if (NULL == executor->handles) {
